@@ -1,7 +1,10 @@
-import { Menu } from "Components/Menu";
+import { Menu } from "../Menu";
 
 const View = () => (
-    <Menu />
+    <div>
+      <Menu />
+    </div>
+    
   )
 
 export default View;

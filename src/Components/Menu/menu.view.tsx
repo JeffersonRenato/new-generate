@@ -1,46 +1,49 @@
-import styles from "./menu.module.scss";
+import "./menu.scss";
 
 const View = () => (
-  <nav className={styles.menuPrincipal}>
-    <a className={styles.botaoLogoHome} href="#">
+  <div className="menu-principal">
+    <header className="menu-cabecalho">
       <img
-        className={styles.imagemLogo}
-        src="https://generate.focolare.org/wp-content/themes/genapp/assets/images/logo-dark.png"
+        className="imagem-logo"
+        src="/image/logo-dark.png"
+        alt="Logo do GENerate"
       />
-    </a>
-    <ul className={styles.menuLista}>
-      <li className={styles.menuItens}>
-        <a className={styles.menuLinks} href="#">
-          Home
-        </a>
-      </li>
-      <li className={styles.menuItens}>
-        <a className={styles.menuLinks} href="#">
-          Pesquisar
-        </a>
-      </li>
-      <li className={styles.menuItens}>
-        <a className={styles.menuLinks} href="#">
-          Favoritos
-        </a>
-      </li>
-      <li className={styles.menuItens}>
-        <a className={styles.menuLinks} href="#">
-          Playlist
-        </a>
-      </li>
-      <li className={styles.menuItens}>
-        <a className={styles.menuLinks} href="#">
-          Sobre GENerate
-        </a>
-      </li>
-      <li className={styles.menuItens}>
-        <a className={styles.menuLinks} href="#">
-          Doações
-        </a>
-      </li>
-    </ul>
-  </nav>
+    </header>
+    <nav className="menu-navegacao">
+      <ul className="menu-lista">
+        <li className="menu-itens">
+          <a className="menu-links" href="#">
+            Home
+          </a>
+        </li>
+        <li className="menu-itens">
+          <a className="menu-links" href="#">
+            Pesquisar
+          </a>
+        </li>
+        <li className="menu-itens">
+          <a className="menu-links" href="#">
+            Favoritos
+          </a>
+        </li>
+        <li className="menu-itens">
+          <a className="menu-links" href="#">
+            Playlist
+          </a>
+        </li>
+        <li className="menu-itens">
+          <a className="menu-links" href="#">
+            Sobre GENerate
+          </a>
+        </li>
+        <li className="menu-itens">
+          <a className="menu-links" href="#">
+            Doações
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 );
 
 export default View;
