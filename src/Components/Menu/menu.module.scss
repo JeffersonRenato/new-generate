@@ -1,29 +1,36 @@
-.menu {
+.menuPrincipal {
   width: 200px;
   height: calc(100vh - 25px);
   padding: 25px 25px 0;
-  float: left;
   background: #222;
-}
 
-.lista {
-  display: block;
-}
+  .imagemLogo {
+    width: 170px;
+    position: absolute;
+    top: 20px;
+    left: 55px;
+  }
 
-ul {
-  margin: 12vh 0 0;
-  padding: 0;
-  list-style: none;
-}
+  .menuLista {
+    padding: 0;
+    margin: 12vh 0 0;
+    list-style: none;
+  }
 
-li {
-  margin: 1vh 0;
-  font-size: 1.2em;
-  line-height: 2em;
-}
+  .menuItens {
+    margin: 1vh 0;
+    font-size: 1.2em;
+    line-height: 2em;
+  }
 
-a {
-  display: block;
-  color: #ffffff;
-  text-decoration: none;
+  .menuLinks {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.5s;
+
+    &:hover {
+      color: #999;
+    }
+  }
 }
