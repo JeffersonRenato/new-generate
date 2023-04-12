@@ -1,10 +1,9 @@
-import { Menu } from "../Menu";
+import "./home.style.scss";
 
 const View = () => (
-    <div>
-      <Menu />
-    </div>
-    
-  )
+  <div className="conteudo-titulo">
+    <h1>Home, viu?</h1>
+  </div>
+);
 
 export default View;
