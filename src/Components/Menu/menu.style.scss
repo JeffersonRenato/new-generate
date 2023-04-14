@@ -18,12 +18,15 @@
     }
 
     .menu-itens {
+      display: flex;
+      align-items: center;
       padding: 12.5px 0;
 
       &:hover {
         cursor: pointer;
 
-        .menu-links-icones, .menu-links {
+        .menu-links-icones,
+        .menu-links {
           color: #999;
         }
       }

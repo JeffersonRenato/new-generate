@@ -25,7 +25,7 @@ const View = () => (
           <li className="menu-itens">
             <FontAwesomeIcon icon={faHome} className="menu-links-icones" />
             <a className="menu-links" href="#">
-              Home
+              Início
             </a>
           </li>
           <li className="menu-itens">
