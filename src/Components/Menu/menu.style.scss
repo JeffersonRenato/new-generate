@@ -1,0 +1,52 @@
+.root-wrapper {
+  display: flex;
+
+  .menu-principal {
+    width: 200px;
+    height: 100vh;
+    padding: 0 25px 0 25px;
+    position: fixed;
+    background: #222;
+
+    .imagem-logo {
+      width: 200px;
+      padding: 25px 0;
+    }
+
+    .menu-navegacao {
+      padding: 25px 0;
+    }
+
+    .menu-itens {
+      display: flex;
+      align-items: center;
+      padding: 12.5px 0;
+
+      &:hover {
+        cursor: pointer;
+
+        .menu-links-icones,
+        .menu-links {
+          color: #999;
+        }
+      }
+    }
+
+    .menu-links-icones {
+      margin-right: 15px;
+      color: #fff;
+      transition: 0.5s;
+    }
+
+    .menu-links {
+      text-decoration: none;
+      font-size: 1.2em;
+      color: #fff;
+      transition: 0.5s;
+    }
+  }
+
+  .conteudo {
+    padding-left: 250px;
+  }
+}

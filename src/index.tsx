@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import router from "./Router";
+import "./reset.scss";
 import "./index.scss";
 
 const root = ReactDOM.createRoot(

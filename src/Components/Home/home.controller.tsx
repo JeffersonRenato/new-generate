@@ -3,7 +3,7 @@ import View from "./home.view";
 
 const Home: FC = () => {
   return (
-      <View />
+    <View />
   );
 };
 
