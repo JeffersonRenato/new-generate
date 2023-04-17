@@ -9,6 +9,7 @@ import {
   faListUl,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
+import { Home } from "../Home";
 
 const View = () => (
   <div className="root-wrapper">
