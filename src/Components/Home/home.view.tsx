@@ -1,9 +1,8 @@
 import "./home.style.scss";
+import { Card } from "../Card";
 
 const View = () => (
-  <div className="conteudo-titulo">
-    <h1>Home, viu?</h1>
-  </div>
+  <Card />
 );
 
 export default View;
