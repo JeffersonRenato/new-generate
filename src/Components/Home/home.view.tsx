@@ -1,8 +1,10 @@
 import "./home.style.scss";
-import { Card } from "../Card";
+import { Carousel } from "../Carousel";
 
 const View = () => (
-  <Card />
+  <div className="home-area">
+    <Carousel />
+  </div>
 );
 
 export default View;
