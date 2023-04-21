@@ -15,7 +15,6 @@ const View = () => (
         <Card />
         <Card />
         <Card />
-        <Card />
       </div>
     </div>
     <div className="carousel-icon-right-area">
