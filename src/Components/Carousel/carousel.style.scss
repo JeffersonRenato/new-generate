@@ -1,6 +1,5 @@
 .carousel-area {
-  max-width: 1100px;
-  width: 90%;
+  width: 100%;
   margin: 50px 0;
   display: flex;
   justify-content: space-between;
@@ -16,7 +15,8 @@
 
     .carousel-content {
       display: flex;
-      gap: 1em;
+      gap: 20px;
+      transition: 0.5s all;
     }
   }
 
@@ -24,11 +24,16 @@
   .carousel-icon-right {
     font-size: 2em;
     color: #fff;
-    transition: 0.3s;
+    transition: 0.3s color;
 
     &:hover {
       color: #666;
       cursor: pointer;
     }
+  }
+
+  .disabled-arrow {
+    opacity: 0;
+    pointer-events: none;
   }
 }
