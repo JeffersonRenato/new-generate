@@ -20,7 +20,7 @@ const View: FC<ICarouselView> = ({
   disabledArrowRight,
 }) => (
   <div className="carousel-area">
-    <div className="carousel-icon-left-area" onClick={() => onClickLeft()}>
+    <div className="carousel-icon-left-area" onClick={onClickLeft}>
       <FontAwesomeIcon
         icon={faAngleLeft}
         className={`carousel-icon-left ${
@@ -29,7 +29,7 @@ const View: FC<ICarouselView> = ({
       />
     </div>
     <div className="carousel-content-area">
-      <div className="carousel-content" style={{ marginLeft: left }}>
+      <div className="carousel-content" style={{ marginLeft: -left }}>
         <Card />
         <Card />
         <Card />
@@ -42,7 +42,7 @@ const View: FC<ICarouselView> = ({
         <Card />
       </div>
     </div>
-    <div className="carousel-icon-right-area" onClick={() => onClickRight()}>
+    <div className="carousel-icon-right-area" onClick={onClickRight}>
       <FontAwesomeIcon
         icon={faAngleRight}
         className={`carousel-icon-right ${

@@ -1,0 +1,5 @@
+{
+  "editor.tabSize": 2,
+  "editor.foldingMaximumRegions": 10000,
+  "prettier.printWidth": 120
+}

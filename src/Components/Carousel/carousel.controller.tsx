@@ -1,30 +1,42 @@
-import { FC, useState } from "react";
+import { FC, useState, useCallback } from "react";
+
+import { validateDisabledArrows } from "./library";
+import { CARD_SIZE } from "./constants";
+
 import View from "./carousel.view";
 
 const Carousel: FC = () => {
   const [left, setLeft] = useState(0);
-  const [disabledArrowLeft, setDisabledArrowLeft] = useState(false);
+  const [disabledArrowLeft, setDisabledArrowLeft] = useState(true);
   const [disabledArrowRight, setDisabledArrowRight] = useState(false);
 
-  function onClickLeft() {
-    if (left < 0) {
-      setLeft(left + 230);
-      setDisabledArrowRight(false);
-    } else {
-      setDisabledArrowLeft(true);
-    }
-  }
+  const handleClick = (position: "left" | "right") => {
+    const wrapperWidth = document.getElementsByClassName("carousel-content-area")[0]?.clientWidth;
+    const innerWidth = document.getElementsByClassName("carousel-content")[0]?.clientWidth;
+    let updatedLeft = left;
 
-  function onClickRight() {
-    const wrapperDiv = document.getElementsByClassName("carousel-content-area")[0];
-    const innerDiv = document.getElementsByClassName("carousel-content")[0];
-    if (left > -innerDiv.clientWidth + wrapperDiv.clientWidth) {
-      setLeft(left - 230);
-      setDisabledArrowLeft(false);
-    } else {
-      setDisabledArrowRight(true);
+    if (position === "right" && left < innerWidth - wrapperWidth) {
+      setLeft(left + CARD_SIZE);
+      updatedLeft += CARD_SIZE;
     }
-  }
+
+    if (position === "left" && left > 0) {
+      setLeft(left - CARD_SIZE);
+      updatedLeft -= CARD_SIZE;
+    }
+
+    const { disabledArrowRight, disabledArrowLeft } = validateDisabledArrows({
+      left: updatedLeft,
+      wrapperWidth,
+      innerWidth,
+    });
+
+    setDisabledArrowRight(disabledArrowRight);
+    setDisabledArrowLeft(disabledArrowLeft);
+  };
+
+  const onClickLeft = () => handleClick("left");
+  const onClickRight = () => handleClick("right");
 
   return (
     <View
