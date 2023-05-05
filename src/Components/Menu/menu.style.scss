@@ -7,6 +7,7 @@
     padding: 0 25px 0 25px;
     position: fixed;
     background: #222;
+    z-index: 99999;
 
     .imagem-logo {
       width: 200px;
@@ -48,7 +49,7 @@
 
   .conteudo {
     padding-left: 250px;
-    width: 100vw;
+    width: calc(100vw - 250px);
     min-height: 100vh;
     background: #333;
   }
