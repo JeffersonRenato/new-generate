@@ -4,14 +4,30 @@
   .menu-principal {
     width: 200px;
     height: 100vh;
-    padding: 0 25px 0 25px;
+    padding: 0 25px;
     position: fixed;
     background: #222;
     z-index: 99999;
+    transition: 0.5s;
+
+    .menu-cabecalho {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .menu-hamburguer {
+      margin-top: 25px;
+      font-size: 1.2em;
+      color: #fff;
+    }
 
     .imagem-logo {
       width: 200px;
+      min-height: 53px;
       padding: 25px 0;
+      object-fit: cover;
+      transition: 0.5s;
     }
 
     .menu-navegacao {
@@ -36,14 +52,14 @@
     .menu-links-icones {
       margin-right: 15px;
       color: #fff;
-      transition: 0.5s;
+      transition: 0.5s color;
     }
 
     .menu-links {
       text-decoration: none;
       font-size: 1.2em;
       color: #fff;
-      transition: 0.5s;
+      transition: 0.5s color;
     }
   }
 
@@ -52,5 +68,36 @@
     width: calc(100vw - 250px);
     min-height: 100vh;
     background: #333;
+  }
+
+  .menu-principal-fechado {
+    width: 30px;
+    padding: 0 10px;
+
+    .menu-cabecalho-fechado {
+      align-items: center;
+    }
+
+    .imagem-logo-fechado {
+      width: 0;
+      padding: 0;
+    }
+
+    .menu-itens-fechado {
+      justify-content: center;
+    }
+
+    .menu-links-icones-fechado {
+      margin-right: 0;
+    }
+
+    .menu-links-fechado {
+      display: none;
+    }
+  }
+
+  .conteudo-fechado {
+    padding-left: 50px;
+    width: calc(100vw - 50px);
   }
 }

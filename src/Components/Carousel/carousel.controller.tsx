@@ -1,4 +1,4 @@
-import { FC, useState, useCallback } from "react";
+import { FC, useState } from "react";
 
 import { validateDisabledArrows } from "./library";
 import { CARD_SIZE } from "./constants";
