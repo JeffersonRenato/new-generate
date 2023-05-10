@@ -4,30 +4,36 @@
   .menu-principal {
     width: 200px;
     height: 100vh;
-    padding: 0 25px;
+    padding: 0 15px;
     position: fixed;
-    background: #222;
     z-index: 99999;
+    background: #222;
+    overflow: hidden;
     transition: 0.5s;
 
     .menu-cabecalho {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: start;
+    }
+
+    .menu-cabecalho-icone-area {
+      width: 18px;
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
     }
 
     .menu-hamburguer {
-      margin-top: 25px;
-      font-size: 1.2em;
       color: #fff;
     }
 
     .imagem-logo {
       width: 200px;
-      min-height: 53px;
-      padding: 25px 0;
-      object-fit: cover;
-      transition: 0.5s;
+      padding-top: 25px;
+      padding-bottom: 15px;
+      user-select: none;
+      transition: 0.3s opacity, 0.5s visibility;
     }
 
     .menu-navegacao {
@@ -38,6 +44,7 @@
       display: flex;
       align-items: center;
       padding: 12.5px 0;
+      white-space: nowrap;
 
       &:hover {
         cursor: pointer;
@@ -49,17 +56,23 @@
       }
     }
 
+    .menu-links-icones-area {
+      width: 15px;
+      display: flex;
+      justify-content: center;
+    }
+
     .menu-links-icones {
-      margin-right: 15px;
       color: #fff;
       transition: 0.5s color;
     }
 
     .menu-links {
-      text-decoration: none;
-      font-size: 1.2em;
+      margin-left: 15px;
       color: #fff;
-      transition: 0.5s color;
+      text-decoration: none;
+      user-select: none;
+      transition: 0.3s opacity, 0.5s visibility;
     }
   }
 
@@ -68,23 +81,16 @@
     width: calc(100vw - 250px);
     min-height: 100vh;
     background: #333;
+    transition: 0.5s;
   }
 
   .menu-principal-fechado {
-    width: 30px;
-    padding: 0 10px;
-
-    .menu-cabecalho-fechado {
-      align-items: center;
-    }
+    width: 18px;
+    padding: 0 15px;
 
     .imagem-logo-fechado {
-      width: 0;
-      padding: 0;
-    }
-
-    .menu-itens-fechado {
-      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
     }
 
     .menu-links-icones-fechado {
@@ -92,7 +98,8 @@
     }
 
     .menu-links-fechado {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
     }
   }
 

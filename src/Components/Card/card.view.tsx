@@ -5,11 +5,7 @@ import { faHeart, faVideo } from "@fortawesome/free-solid-svg-icons";
 const View = () => (
   <div className="card-area-total">
     <div className="card-area-imagem">
-      <img
-        className="card-imagem-principal"
-        src="/image/imagem-card-teste.png"
-        alt="Imagem do card"
-      />
+      <img className="card-imagem-principal" src="/image/imagem-card-teste.png" alt="Imagem do card" />
       <FontAwesomeIcon icon={faHeart} className="card-icone-favorito" />
     </div>
     <div className="card-area-descricao">

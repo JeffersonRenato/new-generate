@@ -20,8 +20,10 @@ interface IMenuView {
 const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed }) => (
   <div className="root-wrapper">
     <div className={`menu-principal ${isCollapsed ? "menu-principal-fechado" : ""}`}>
-      <header className={`menu-cabecalho ${isCollapsed ? "menu-cabecalho-fechado" : ""}`}>
-        <FontAwesomeIcon icon={faBars} onClick={onClickCollapsed} className="menu-hamburguer" />
+      <header className="menu-cabecalho">
+        <div className="menu-cabecalho-icone-area">
+          <FontAwesomeIcon icon={faBars} onClick={onClickCollapsed} className="menu-hamburguer" />
+        </div>
         <img
           className={`imagem-logo ${isCollapsed ? "imagem-logo-fechado" : ""}`}
           src="/image/logo-dark.png"
@@ -30,56 +32,68 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed }) => (
       </header>
       <nav className="menu-navegacao">
         <ul className="menu-lista">
-          <li className={`menu-itens ${isCollapsed ? "menu-itens-fechado" : ""}`}>
-            <FontAwesomeIcon
-              icon={faHome}
-              className={`menu-links-icones ${isCollapsed ? "menu-links-icones-fechado" : ""}`}
-            />
+          <li className="menu-itens">
+            <div className="menu-links-icones-area">
+              <FontAwesomeIcon
+                icon={faHome}
+                className={`menu-links-icones ${isCollapsed ? "menu-links-icones-fechado" : ""}`}
+              />
+            </div>
             <a className={`menu-links ${isCollapsed ? "menu-links-fechado" : ""}`} href="#">
               Início
             </a>
           </li>
-          <li className={`menu-itens ${isCollapsed ? "menu-itens-fechado" : ""}`}>
-            <FontAwesomeIcon
-              icon={faSearch}
-              className={`menu-links-icones ${isCollapsed ? "menu-links-icones-fechado" : ""}`}
-            />
+          <li className="menu-itens">
+            <div className="menu-links-icones-area">
+              <FontAwesomeIcon
+                icon={faSearch}
+                className={`menu-links-icones ${isCollapsed ? "menu-links-icones-fechado" : ""}`}
+              />
+            </div>
             <a className={`menu-links ${isCollapsed ? "menu-links-fechado" : ""}`} href="#">
               Pesquisar
             </a>
           </li>
-          <li className={`menu-itens ${isCollapsed ? "menu-itens-fechado" : ""}`}>
-            <FontAwesomeIcon
-              icon={faHeart}
-              className={`menu-links-icones ${isCollapsed ? "menu-links-icones-fechado" : ""}`}
-            />
+          <li className="menu-itens">
+            <div className="menu-links-icones-area">
+              <FontAwesomeIcon
+                icon={faHeart}
+                className={`menu-links-icones ${isCollapsed ? "menu-links-icones-fechado" : ""}`}
+              />
+            </div>
             <a className={`menu-links ${isCollapsed ? "menu-links-fechado" : ""}`} href="#">
               Favoritos
             </a>
           </li>
-          <li className={`menu-itens ${isCollapsed ? "menu-itens-fechado" : ""}`}>
-            <FontAwesomeIcon
-              icon={faListUl}
-              className={`menu-links-icones ${isCollapsed ? "menu-links-icones-fechado" : ""}`}
-            />
+          <li className="menu-itens">
+            <div className="menu-links-icones-area">
+              <FontAwesomeIcon
+                icon={faListUl}
+                className={`menu-links-icones ${isCollapsed ? "menu-links-icones-fechado" : ""}`}
+              />
+            </div>
             <a className={`menu-links ${isCollapsed ? "menu-links-fechado" : ""}`} href="#">
               Playlist
             </a>
           </li>
-          <li className={`menu-itens ${isCollapsed ? "menu-itens-fechado" : ""}`}>
-            <FontAwesomeIcon
-              icon={faCircleQuestion}
-              className={`menu-links-icones ${isCollapsed ? "menu-links-icones-fechado" : ""}`}
-            />
+          <li className="menu-itens">
+            <div className="menu-links-icones-area">
+              <FontAwesomeIcon
+                icon={faCircleQuestion}
+                className={`menu-links-icones ${isCollapsed ? "menu-links-icones-fechado" : ""}`}
+              />
+            </div>
             <a className={`menu-links ${isCollapsed ? "menu-links-fechado" : ""}`} href="#">
               Sobre GENerate
             </a>
           </li>
-          <li className={`menu-itens ${isCollapsed ? "menu-itens-fechado" : ""}`}>
-            <FontAwesomeIcon
-              icon={faHandHoldingHeart}
-              className={`menu-links-icones ${isCollapsed ? "menu-links-icones-fechado" : ""}`}
-            />
+          <li className="menu-itens">
+            <div className="menu-links-icones-area">
+              <FontAwesomeIcon
+                icon={faHandHoldingHeart}
+                className={`menu-links-icones ${isCollapsed ? "menu-links-icones-fechado" : ""}`}
+              />
+            </div>
             <a className={`menu-links ${isCollapsed ? "menu-links-fechado" : ""}`} href="#">
               Doações
             </a>
