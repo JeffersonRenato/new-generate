@@ -14,11 +14,13 @@ interface ICarouselView {
 
 const View: FC<ICarouselView> = ({ onClickLeft, onClickRight, left, disabledArrowLeft, disabledArrowRight }) => (
   <div className="carousel-area">
-    <div className="carousel-icon-left-area" onClick={onClickLeft}>
-      <FontAwesomeIcon
-        icon={faAngleLeft}
-        className={`carousel-icon-left ${disabledArrowLeft ? "disabled-arrow" : ""}`}
-      />
+    <div className="carousel-arrow-area" onClick={onClickLeft}>
+      <div className={`carousel-arrow-hover ${disabledArrowLeft ? "carousel-arrow-hover-disabled" : ""}`}>
+        <FontAwesomeIcon
+          icon={faAngleLeft}
+          className={`carousel-arrow ${disabledArrowLeft ? "disabled-arrow" : ""}`}
+        />
+      </div>
     </div>
     <div className="carousel-content-area">
       <div className="carousel-content" style={{ marginLeft: -left }}>
@@ -34,11 +36,13 @@ const View: FC<ICarouselView> = ({ onClickLeft, onClickRight, left, disabledArro
         <Card />
       </div>
     </div>
-    <div className="carousel-icon-right-area" onClick={onClickRight}>
-      <FontAwesomeIcon
-        icon={faAngleRight}
-        className={`carousel-icon-right ${disabledArrowRight ? "disabled-arrow" : ""}`}
-      />
+    <div className="carousel-arrow-area" onClick={onClickRight}>
+      <div className={`carousel-arrow-hover ${disabledArrowRight ? "carousel-arrow-hover-disabled" : ""}`}>
+        <FontAwesomeIcon
+          icon={faAngleRight}
+          className={`carousel-arrow ${disabledArrowRight ? "disabled-arrow" : ""}`}
+        />
+      </div>
     </div>
   </div>
 );

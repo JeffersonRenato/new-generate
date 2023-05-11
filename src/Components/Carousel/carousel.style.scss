@@ -21,20 +21,37 @@
     }
   }
 
-  .carousel-icon-left,
-  .carousel-icon-right {
-    font-size: 2em;
-    color: #fff;
-    transition: 0.3s color;
+  .carousel-arrow-hover {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s background-color, 0.5s color;
+
+    .carousel-arrow {
+      font-size: 2em;
+      color: #fff;
+      transition: 0.5s color, 0.5s opacity;
+    }
 
     &:hover {
-      color: #666;
       cursor: pointer;
+      background-color: #fff;
+
+      .carousel-arrow {
+        color: #555;
+      }
     }
   }
 
-  .disabled-arrow {
-    opacity: 0;
+  .carousel-arrow-hover-disabled {
     pointer-events: none;
+  }
+
+  .disabled-arrow {
+    pointer-events: none;
+    opacity: 0.1;
   }
 }

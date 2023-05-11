@@ -77,8 +77,8 @@
   }
 
   .conteudo {
-    padding-left: 250px;
-    width: calc(100vw - 250px);
+    padding-left: 230px;
+    width: calc(100vw - 230px);
     min-height: 100vh;
     background: #333;
     transition: 0.5s;
@@ -104,7 +104,7 @@
   }
 
   .conteudo-fechado {
-    padding-left: 50px;
-    width: calc(100vw - 50px);
+    padding-left: 48px;
+    width: calc(100vw - 48px);
   }
 }
