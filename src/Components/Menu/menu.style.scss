@@ -3,7 +3,7 @@
 
   .menu-principal {
     width: 200px;
-    height: 100vh;
+    height: 100%;
     padding: 0 15px;
     position: fixed;
     z-index: 99999;
@@ -78,8 +78,8 @@
 
   .conteudo {
     padding-left: 230px;
-    width: calc(100vw - 230px);
-    min-height: 100vh;
+    width: calc(100% - 230px);
+    min-height: 100%;
     background: #333;
     transition: 0.5s;
   }
@@ -105,6 +105,6 @@
 
   .conteudo-fechado {
     padding-left: 48px;
-    width: calc(100vw - 48px);
+    width: calc(100% - 48px);
   }
 }

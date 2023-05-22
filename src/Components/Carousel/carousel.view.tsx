@@ -14,11 +14,11 @@ interface ICarouselView {
 
 const View: FC<ICarouselView> = ({ onClickLeft, onClickRight, left, disabledArrowLeft, disabledArrowRight }) => (
   <div className="carousel-area">
-    <div className="carousel-arrow-area" onClick={onClickLeft}>
+    <div className="carousel-arrow-area  carousel-arrow-area-left" onClick={onClickLeft}>
       <div className={`carousel-arrow-hover ${disabledArrowLeft ? "carousel-arrow-hover-disabled" : ""}`}>
         <FontAwesomeIcon
           icon={faAngleLeft}
-          className={`carousel-arrow ${disabledArrowLeft ? "disabled-arrow" : ""}`}
+          className={`carousel-arrow carousel-arrow-left ${disabledArrowLeft ? "disabled-arrow" : ""}`}
         />
       </div>
     </div>
@@ -36,7 +36,7 @@ const View: FC<ICarouselView> = ({ onClickLeft, onClickRight, left, disabledArro
         <Card />
       </div>
     </div>
-    <div className="carousel-arrow-area" onClick={onClickRight}>
+    <div className="carousel-arrow-area carousel-arrow-area-right" onClick={onClickRight}>
       <div className={`carousel-arrow-hover ${disabledArrowRight ? "carousel-arrow-hover-disabled" : ""}`}>
         <FontAwesomeIcon
           icon={faAngleRight}
