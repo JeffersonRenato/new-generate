@@ -1,6 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home } from "./Components/Home";
 import { Menu } from "./Components/Menu";
+import { Home } from "./Pages/Home";
+import { Search } from "./Pages/Search";
+import { Favorites } from "./Pages/Favorites";
+import { Playlist } from "./Pages/Playlist";
+import { About } from "./Pages/About";
+import { Donate } from "./Pages/Donate";
 
 const router = createBrowserRouter([
   {
@@ -10,6 +15,26 @@ const router = createBrowserRouter([
       {
         path: "home",
         element: <Home />,
+      },
+      {
+        path: "pesquisar",
+        element: <Search />,
+      },
+      {
+        path: "favoritos",
+        element: <Favorites />,
+      },
+      {
+        path: "playlist",
+        element: <Playlist />,
+      },
+      {
+        path: "sobre",
+        element: <About />,
+      },
+      {
+        path: "doacoes",
+        element: <Donate />,
       },
     ],
   },

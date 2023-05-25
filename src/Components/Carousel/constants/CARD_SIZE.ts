@@ -1,3 +1,3 @@
-const CARD_SIZE = 230;
+const CARD_SIZE = 310;
 
 export default CARD_SIZE;

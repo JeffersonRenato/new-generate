@@ -1,21 +1,32 @@
-import "./card.style.scss";
+import { FC } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faVideo } from "@fortawesome/free-solid-svg-icons";
+import "./card.style.scss";
+import { ITypeCard } from "../../Services";
 
-const View = () => (
+interface ICard {
+  id: number;
+  image: string;
+  author: string | null;
+  title: string;
+  length: string;
+  type: ITypeCard;
+}
+
+const View: FC<ICard> = ({ id, image, author, title, length, type }) => (
   <div className="card-area-total">
     <div className="card-area-imagem">
-      <img className="card-imagem-principal" src="/image/imagem-card-teste.png" alt="Imagem do card" />
+      <img className="card-imagem-principal" src={image} alt="Imagem do card" />
       <FontAwesomeIcon icon={faHeart} className="card-icone-favorito" />
     </div>
     <div className="card-area-descricao">
-      <h3 className="card-autor">Karram Margaret</h3>
-      <p className="card-titulo">Interior life and prayer - Margaret Karram</p>
-      <p className="card-duracao">Duração: 32 min</p>
+      <h3 className="card-autor">{author}</h3>
+      <p className="card-titulo">{title}</p>
+      <p className="card-duracao">{`Duração: ${length} min`}</p>
     </div>
     <div className="card-area-midia-descricao">
       <FontAwesomeIcon icon={faVideo} className="card-icone-midia" />
-      <p className="card-midia-tipo">Vídeo</p>
+      <p className="card-midia-tipo">{type}</p>
     </div>
   </div>
 );

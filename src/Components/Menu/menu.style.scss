@@ -3,23 +3,23 @@
 
   .menu-principal {
     width: 200px;
-    height: 100vh;
+    height: 100%;
     padding: 0 15px;
     position: fixed;
-    z-index: 99999;
+    z-index: 9;
     background: #222;
     overflow: hidden;
     transition: 0.5s;
 
     .menu-cabecalho {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
+      gap: 15px;
+      margin-top: 10px;
     }
 
     .menu-cabecalho-icone-area {
-      width: 18px;
-      margin-top: 25px;
+      width: 14px;
       display: flex;
       justify-content: center;
     }
@@ -29,7 +29,7 @@
     }
 
     .imagem-logo {
-      width: 200px;
+      width: 130px;
       padding-top: 25px;
       padding-bottom: 15px;
       user-select: none;
@@ -38,6 +38,10 @@
 
     .menu-navegacao {
       padding: 25px 0;
+    }
+
+    .router-dom-links {
+      text-decoration: none;
     }
 
     .menu-itens {
@@ -70,7 +74,6 @@
     .menu-links {
       margin-left: 15px;
       color: #fff;
-      text-decoration: none;
       user-select: none;
       transition: 0.5s color, 0.3s opacity, 0.5s visibility;
     }
@@ -78,8 +81,8 @@
 
   .conteudo {
     padding-left: 230px;
-    width: calc(100vw - 230px);
-    min-height: 100vh;
+    width: calc(100% - 230px);
+    min-height: 100%;
     background: #333;
     transition: 0.5s;
   }
@@ -105,6 +108,6 @@
 
   .conteudo-fechado {
     padding-left: 48px;
-    width: calc(100vw - 48px);
+    width: calc(100% - 48px);
   }
 }

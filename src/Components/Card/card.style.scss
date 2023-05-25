@@ -1,27 +1,29 @@
 .card-area-total {
-  width: 210px;
+  width: 290px;
   height: fit-content;
   background: #444;
-  border-radius: 20px;
-  overflow: hidden;
+  border-radius: 25px;
   color: #fff;
+  overflow: hidden;
   transition: 0.5s;
-
+  
   &:hover {
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 0.7;
   }
-
+  
   .card-area-imagem {
-    height: 170px;
+    height: auto;
     position: relative;
+    overflow: hidden;
 
     .card-imagem-principal {
-      width: 210px;
+      width: 290px;
     }
 
     .card-icone-favorito {
       position: absolute;
+      font-size: 1.2em;
       right: 10px;
       top: 10px;
       transition: 0.5s;
@@ -34,6 +36,7 @@
 
   .card-area-descricao {
     height: 120px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
