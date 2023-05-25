@@ -7,6 +7,8 @@
     font-weight: 700;
     color: #fff;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .carousel-area {
