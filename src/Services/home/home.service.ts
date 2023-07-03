@@ -10,9 +10,3 @@ class ServiceHome {
 }
 
 export default ServiceHome;
-
-// ServiceHome.getCarousels()
-// .then((data) => {
-
-// })
-// .catch()

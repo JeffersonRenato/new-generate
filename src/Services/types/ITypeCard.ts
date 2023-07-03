@@ -1,3 +1,3 @@
-type ITypeCard = "Vídeo" | "Áudio" | "Documento";
+type ITypeCard = "VIDEO" | "AUDIO" | "TEXT";
 
 export default ITypeCard;
