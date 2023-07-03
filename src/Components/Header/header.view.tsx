@@ -3,26 +3,34 @@ import "./header.style.scss";
 import { IImageProps } from "./header.controller";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 interface IProps {
-  onClick: (image: IImageProps) => void;
-  imageSrc: string;
-  imageBackSrc: string;
   allImages: IImageProps[];
-  hasBackgroundImage: boolean;
 }
 
-const View: FC<IProps> = ({ onClick, imageSrc, imageBackSrc, allImages, hasBackgroundImage }) => (
+const View: FC<IProps> = ({ allImages }) => (
   <div className="header-wrap">
-    <div className="images-header-area">
-      <img className={`selected-image ${hasBackgroundImage ? 'opacity': ''}`} src={imageSrc} />
-      <img className="background-image" src={imageBackSrc} />
-    </div>
-    <div className="pagination-header-area">
-      {allImages.map((image, index) => (
-        <FontAwesomeIcon key={index} onClick={() => onClick(image)} icon={faCircle} className="pagination-header" />
+    <Splide
+      aria-label="My Favorite Images"
+      options={{
+        type: "fade",
+        rewind: true,
+        arrows: false,
+        drag: false,
+        autoplay: true,
+        interval: 5000,
+        speed: 1000,
+        pauseOnHover: true,
+      }}
+    >
+      {allImages.map((image) => (
+        <SplideSlide key={image.index}>
+          <img className="slider-image" src={image.src} />
+        </SplideSlide>
       ))}
-    </div>
+    </Splide>
   </div>
 );
 

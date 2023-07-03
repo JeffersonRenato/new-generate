@@ -1,53 +1,5 @@
-.header-wrap {
-  width: inherit;
-  user-select: none;
-
-  .images-header-area {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    max-height: 640px;
-    overflow: hidden;
-
-    .selected-image {
-      width: 100%;
-      max-height: 640px;
-      object-fit: cover;
-      z-index: 2;
-      transition: 1s opacity;
-    }
-
-    .background-image {
-      width: 100%;
-      max-height: 640px;
-      object-fit: cover;
-      position: absolute;
-      z-index: 1;
-    }
-  }
-
-  .pagination-header-area {
-    display: flex;
-    justify-content: center;
-    gap: 1vw;
-    margin-top: 1vw;
-    z-index: 9;
-
-    .pagination-header {
-      font-size: 1vw;
-      color: #666;
-      transition: 0.5s color;
-
-      &:hover {
-        cursor: pointer;
-        color: #fff;
-      }
-    }
-  }
-
-  .opacity {
-    opacity: 0;
-  }
+.slider-image {
+  width: 100%;
+  max-height: 640px;
+  object-fit: cover;
 }
