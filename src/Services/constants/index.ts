@@ -1,3 +1,4 @@
 import CAROUSEL from "./CAROUSEL";
+import ABOUT from "./ABOUT";
 
-export { CAROUSEL };
+export { CAROUSEL, ABOUT };
