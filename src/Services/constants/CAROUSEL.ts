@@ -6,11 +6,12 @@ const CAROUSEL: ICarouselResponse[] = [
     cards: [
       {
         id: 1,
-        image: "https://generate.focolare.org/wp-content/uploads/2022/09/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA-2022-09-29-%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE-6.35.38-e1664530726883-500x400.png",
+        image:
+          "https://generate.focolare.org/wp-content/uploads/2022/09/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA-2022-09-29-%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE-6.35.38-e1664530726883-500x400.png",
         author: "KARRAM MARGARET",
         title: "A vida interior e a oração – Margaret Karram",
         length: "32",
-        type: "Vídeo",
+        type: "VIDEO",
       },
       {
         id: 2,
@@ -18,7 +19,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "LUBICH CHIARA",
         title: "Maria e a Obra de Maria",
         length: "3",
-        type: "Vídeo",
+        type: "VIDEO",
       },
       {
         id: 3,
@@ -26,7 +27,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "LUBICH CHIARA",
         title: "Ser Outra Maria",
         length: "8",
-        type: "Vídeo",
+        type: "VIDEO",
       },
       {
         id: 4,
@@ -34,15 +35,16 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "LUBICH CHIARA",
         title: "Maria, condutora da humanidade",
         length: "15",
-        type: "Vídeo",
+        type: "VIDEO",
       },
       {
         id: 5,
-        image: "https://generate.focolare.org/wp-content/uploads/2022/02/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA-2022-02-23-%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE-6.53.26-500x400.png",
+        image:
+          "https://generate.focolare.org/wp-content/uploads/2022/02/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA-2022-02-23-%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE-6.53.26-500x400.png",
         author: null,
         title: "Tutorial GENerate",
         length: "47",
-        type: "Vídeo",
+        type: "VIDEO",
       },
     ],
   },
@@ -56,7 +58,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "Chiara Lubich",
         title: "Frutos da vontade de Deus",
         length: "17",
-        type: "Vídeo",
+        type: "VIDEO",
       },
       {
         id: 7,
@@ -64,7 +66,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "Chiara Lubich",
         title: "Maria doa a vida",
         length: "2",
-        type: "Vídeo",
+        type: "VIDEO",
       },
       {
         id: 8,
@@ -72,7 +74,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "Chiara Lubich",
         title: "Fazer justiça - Maria sinal de contradição",
         length: "23",
-        type: "Vídeo",
+        type: "VIDEO",
       },
       {
         id: 9,
@@ -80,7 +82,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "Chiara Lubich",
         title: "Perder como Maria",
         length: "6",
-        type: "Vídeo",
+        type: "VIDEO",
       },
     ],
   },
@@ -93,7 +95,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "CENTROS GEN2 - JPMU",
         title: "EBA2022_O amor cura a Criação Parte 1",
         length: "49",
-        type: "Vídeo",
+        type: "VIDEO",
       },
       {
         id: 11,
@@ -101,7 +103,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "CENTROS GEN2 - JPMU, ELISABETH REICHEL",
         title: "EBA2022_O amor cura os relacionamentos Parte 1",
         length: "46",
-        type: "Vídeo",
+        type: "VIDEO",
       },
       {
         id: 12,
@@ -109,7 +111,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "CENTROS GEN2 - JPMU",
         title: "EBA2022_O amor cura e acompanha Parte 1",
         length: "30",
-        type: "Vídeo",
+        type: "VIDEO",
       },
       {
         id: 13,
@@ -117,7 +119,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "BERTOLASI TOMMASO, CENTROS GEN2 - JPMU",
         title: "EBA2022_O amor cura as nossas fragilidades Parte 1",
         length: "31",
-        type: "Vídeo",
+        type: "VIDEO",
       },
       {
         id: 14,
@@ -125,7 +127,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "CENTROS GEN2 - JPMU",
         title: "EBA2022_O amor cura o olhar sobre o outro",
         length: "62",
-        type: "Vídeo",
+        type: "VIDEO",
       },
       {
         id: 15,
@@ -133,7 +135,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "CENTROS GEN2 - JPMU",
         title: "EBA2022_O amor cura a Criação Parte 2",
         length: "49",
-        type: "Vídeo",
+        type: "VIDEO",
       },
       {
         id: 16,
@@ -141,7 +143,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "CENTROS GEN2 - JPMU, ELISABETH REICHEL",
         title: "EBA2022_O amor cura os relacionamentos Parte 2",
         length: "92",
-        type: "Vídeo",
+        type: "VIDEO",
       },
       {
         id: 17,
@@ -149,7 +151,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "CENTROS GEN2 - JPMU, ELISABETH REICHEL",
         title: "EBA2022_O amor cura os relacionamentos Parte 2",
         length: "92",
-        type: "Vídeo",
+        type: "VIDEO",
       },
     ],
   },
@@ -162,7 +164,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "Genfest 2000",
         title: "Controvento",
         length: "4",
-        type: "Áudio",
+        type: "AUDIO",
       },
       {
         id: 19,
@@ -170,7 +172,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "Genfest 2000",
         title: "Sincronizzati",
         length: "3",
-        type: "Áudio",
+        type: "AUDIO",
       },
       {
         id: 20,
@@ -178,7 +180,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "Genfest 2000",
         title: "Hold on",
         length: "4",
-        type: "Áudio",
+        type: "AUDIO",
       },
       {
         id: 21,
@@ -186,7 +188,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "Genfest 2000",
         title: "Facts not words",
         length: "4",
-        type: "Áudio",
+        type: "AUDIO",
       },
       {
         id: 22,
@@ -194,7 +196,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "Genfest 2000",
         title: "Un cielo da scoprire",
         length: "4",
-        type: "Áudio",
+        type: "AUDIO",
       },
       {
         id: 23,
@@ -202,7 +204,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "Genfest 2000",
         title: "Basta una sonrisa",
         length: "5",
-        type: "Áudio",
+        type: "AUDIO",
       },
       {
         id: 24,
@@ -210,7 +212,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "Genfest 2000",
         title: "Now and here",
         length: "3",
-        type: "Áudio",
+        type: "AUDIO",
       },
       {
         id: 25,
@@ -218,7 +220,7 @@ const CAROUSEL: ICarouselResponse[] = [
         author: "Genfest 2000",
         title: "Fill the void",
         length: "4",
-        type: "Áudio",
+        type: "AUDIO",
       },
     ],
   },

@@ -3,6 +3,7 @@ import ITypeCard from "./ITypeCard";
 import ICarouselResponse from "./ICarouselResponse";
 import IParagraph from './IParagraph';
 import IAboutResponse from './IAboutResponse';
+import IContentResponse from './IContentResponse';
 
 export type {
   ICard,
@@ -10,4 +11,5 @@ export type {
   ICarouselResponse,
   IParagraph,
   IAboutResponse,
+  IContentResponse
 }

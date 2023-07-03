@@ -21,10 +21,6 @@ const Carousel: FC<ICarousel> = ({ label, cards }) => {
     if (!externalElement || !internalElement) return;
 
     const observer = new ResizeObserver((entries) => {
-      console.log("\n");
-      console.log(label);
-      console.log("de fora ", entries[0].contentRect.width);
-      console.log("de dentro ", carouselContent.current?.clientWidth);
 
       if (entries[0].contentRect.width >= internalElement.clientWidth) {
         setHiddenArrow(true);
