@@ -1,10 +1,8 @@
 import { FC } from "react";
-import "./header.style.scss";
 import { IImageProps } from "./header.controller";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import "./header.style.scss";
 
 interface IProps {
   allImages: IImageProps[];

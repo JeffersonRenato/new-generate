@@ -6,12 +6,12 @@
   color: #fff;
   overflow: hidden;
   transition: 0.5s;
-  
+
   &:hover {
     cursor: pointer;
     opacity: 0.7;
   }
-  
+
   .card-area-imagem {
     height: auto;
     position: relative;
@@ -31,6 +31,10 @@
       &:hover {
         color: red;
       }
+    }
+
+    .card-icone-favorito-ativo {
+      color: red;
     }
   }
 

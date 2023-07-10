@@ -11,13 +11,19 @@ interface ICard {
   title: string;
   length: string;
   type: ITypeCard;
+  onClickFavorite: () => void;
+  isFavorite: boolean;
 }
 
-const View: FC<ICard> = ({ id, image, author, title, length, type }) => (
+const View: FC<ICard> = ({ image, author, title, length, type, onClickFavorite, isFavorite }) => (
   <div className="card-area-total">
     <div className="card-area-imagem">
       <img className="card-imagem-principal" src={image} alt="Imagem do card" />
-      <FontAwesomeIcon icon={faHeart} className="card-icone-favorito" />
+      <FontAwesomeIcon
+        icon={faHeart}
+        className={`card-icone-favorito ${isFavorite ? "card-icone-favorito-ativo" : ""}`}
+        onClick={onClickFavorite}
+      />
     </div>
     <div className="card-area-descricao">
       <h3 className="card-autor">{author}</h3>

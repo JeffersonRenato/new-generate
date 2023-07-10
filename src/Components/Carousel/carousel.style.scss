@@ -1,5 +1,6 @@
 .carousel-wrap {
   margin: 10px 0;
+  user-select: none;
 
   .carousel-title {
     margin: 25px 60px;
@@ -18,7 +19,6 @@
     align-items: center;
     gap: 0.5em;
     position: relative;
-    user-select: none;
 
     .carousel-content-area {
       width: 95%;
@@ -37,7 +37,7 @@
       padding-left: 15px;
       padding-right: 5px;
     }
-    
+
     .carousel-arrow-area-right {
       padding-left: 5px;
       padding-right: 15px;

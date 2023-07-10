@@ -1,5 +1,3 @@
-import validateDisabledArrows from './validateDisabledArrows';
+import validateDisabledArrows from "./validateDisabledArrows";
 
-export {
-  validateDisabledArrows,
-}
+export { validateDisabledArrows };

@@ -1,5 +1,3 @@
-import CARD_SIZE from './CARD_SIZE';
+import CARD_SIZE from "./CARD_SIZE";
 
-export {
-    CARD_SIZE,
-}
+export { CARD_SIZE };
