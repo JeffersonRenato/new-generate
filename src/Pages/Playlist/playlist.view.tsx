@@ -1,8 +1,9 @@
-import "./playlist.style.scss";
+import { PlaylistWrapper } from "./playlist.style";
 
 const View = () => (
-  <div className="playlist-area">
-  </div>
+  <PlaylistWrapper>
+    Playlist
+  </PlaylistWrapper>
 );
 
 export default View;

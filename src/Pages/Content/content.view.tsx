@@ -1,7 +1,7 @@
 import { FC } from "react";
 import ReactPlayer from "react-player";
 import { IContentResponse } from "../../Services";
-import "./content.style.scss";
+import { ContentWrapper } from "./content.style";
 
 interface IProps {
   content: IContentResponse | null;
@@ -9,7 +9,7 @@ interface IProps {
 }
 
 const View: FC<IProps> = ({ content, formatedType }) => (
-  <div className="content-wrap">
+  <ContentWrapper>
     <div className="content-area">
       <div className="content-title-area">
         <h1 className="content-title">{content?.title}</h1>
@@ -43,11 +43,7 @@ const View: FC<IProps> = ({ content, formatedType }) => (
         </div>
       </div>
     </div>
-    <div className="tips-area">
-      <div className="tips-title-area"></div>
-      <h2 className="tips-title">Recomendados</h2>
-    </div>
-  </div>
+  </ContentWrapper>
 );
 
 export default View;

@@ -1,4 +1,6 @@
-.about-area {
+import styled from "styled-components";
+
+export const AboutWrapper = styled.div`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,4 +30,4 @@
       text-align: justify;
     }
   }
-}
+`;

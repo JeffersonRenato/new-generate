@@ -1,9 +1,9 @@
-import "./carousel.style.scss";
+import { FC } from "react";
+import { Card } from "../Card";
+import { ICard } from "../../Services";
+import { CarouselWrapper } from "./carousel.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { Card } from "../Card";
-import { FC } from "react";
-import { ICard } from "../../Services";
 
 interface ICarouselView {
   onClickRight: () => void;
@@ -30,7 +30,7 @@ const View: FC<ICarouselView> = ({
   carouselContentArea,
   carouselContent,
 }) => (
-  <div className="carousel-wrap">
+  <CarouselWrapper>
     <h3 className="carousel-title">{label}</h3>
     <div className="carousel-area">
       <div className="carousel-arrow-area carousel-arrow-area-left" onClick={onClickLeft}>
@@ -76,7 +76,7 @@ const View: FC<ICarouselView> = ({
         </div>
       </div>
     </div>
-  </div>
+  </CarouselWrapper>
 );
 
 export default View;

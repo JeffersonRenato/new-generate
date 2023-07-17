@@ -1,15 +1,15 @@
 import { FC } from "react";
 import { IImageProps } from "./header.controller";
+import { HeaderWrapper } from "./header.style";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import "./header.style.scss";
 
 interface IProps {
   allImages: IImageProps[];
 }
 
 const View: FC<IProps> = ({ allImages }) => (
-  <div className="header-wrap">
+  <HeaderWrapper>
     <Splide
       aria-label="My Favorite Images"
       options={{
@@ -29,7 +29,7 @@ const View: FC<IProps> = ({ allImages }) => (
         </SplideSlide>
       ))}
     </Splide>
-  </div>
+  </HeaderWrapper>
 );
 
 export default View;

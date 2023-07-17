@@ -1,4 +1,6 @@
-.content-wrap {
+import styled from "styled-components";
+
+export const ContentWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   height: 100vh;
@@ -55,14 +57,4 @@
       }
     }
   }
-
-  .tips-area {
-    width: 40%;
-
-    .tips-title {
-      font-size: 1.4em;
-      font-weight: 700;
-      color: #fff;
-    }
-  }
-}
+`;

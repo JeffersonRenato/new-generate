@@ -1,8 +1,9 @@
-import "./search.style.scss";
+import { SearchWrapper } from "./search.style";
 
 const View = () => (
-  <div className="search-area">
-  </div>
+  <SearchWrapper>
+    Search
+  </SearchWrapper>
 );
 
 export default View;

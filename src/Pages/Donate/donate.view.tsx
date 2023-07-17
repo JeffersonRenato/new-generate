@@ -1,8 +1,9 @@
-import "./donate.style.scss";
+import { DonateWrapper } from "./donate.style";
 
 const View = () => (
-  <div className="donate-area">
-  </div>
+  <DonateWrapper>
+    Donate
+  </DonateWrapper>
 );
 
 export default View;

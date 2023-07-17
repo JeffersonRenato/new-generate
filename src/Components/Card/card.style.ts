@@ -1,4 +1,6 @@
-.card-area-total {
+import styled from "styled-components";
+
+export const CardWrapper = styled.div`
   width: 290px;
   height: fit-content;
   background: #444;
@@ -76,4 +78,4 @@
       margin-right: 10px;
     }
   }
-}
+`;

@@ -1,8 +1,9 @@
-import "./favorites.style.scss";
+import { FavoritesWrapper } from "./favorites.style";
 
 const View = () => (
-  <div className="favorites-area">
-  </div>
+  <FavoritesWrapper>
+    Favorites
+  </FavoritesWrapper>
 );
 
 export default View;

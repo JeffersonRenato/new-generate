@@ -1,13 +1,13 @@
 import { FC } from "react";
 import { IAboutResponse } from "../../Services";
-import "./about.style.scss";
+import { AboutWrapper } from "./about.style";
 
 interface IProps {
   about: IAboutResponse[];
 }
 
 const View: FC<IProps> = (props) => (
-  <div className="about-area">
+  <AboutWrapper>
     {props.about.map((about) => (
       <>
         <div className="about-title-area">
@@ -27,7 +27,7 @@ const View: FC<IProps> = (props) => (
         </div>
       </>
     ))}
-  </div>
+  </AboutWrapper>
 );
 
 export default View;

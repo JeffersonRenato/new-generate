@@ -1,4 +1,6 @@
-.root-wrapper {
+import styled from "styled-components";
+
+export const MenuWrapper = styled.div`
   display: flex;
 
   .menu-principal {
@@ -113,4 +115,4 @@
     padding-left: 48px;
     width: calc(100% - 48px);
   }
-}
+`;

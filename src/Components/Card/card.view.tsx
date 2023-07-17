@@ -1,8 +1,8 @@
 import { FC } from "react";
+import { ITypeCard } from "../../Services";
+import { CardWrapper } from "./card.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faVideo } from "@fortawesome/free-solid-svg-icons";
-import "./card.style.scss";
-import { ITypeCard } from "../../Services";
 
 interface ICard {
   id: number;
@@ -16,7 +16,7 @@ interface ICard {
 }
 
 const View: FC<ICard> = ({ image, author, title, length, type, onClickFavorite, isFavorite }) => (
-  <div className="card-area-total">
+  <CardWrapper>
     <div className="card-area-imagem">
       <img className="card-imagem-principal" src={image} alt="Imagem do card" />
       <FontAwesomeIcon
@@ -34,7 +34,7 @@ const View: FC<ICard> = ({ image, author, title, length, type, onClickFavorite, 
       <FontAwesomeIcon icon={faVideo} className="card-icone-midia" />
       <p className="card-midia-tipo">{type}</p>
     </div>
-  </div>
+  </CardWrapper>
 );
 
 export default View;

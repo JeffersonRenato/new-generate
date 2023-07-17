@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Outlet, Link } from "react-router-dom";
+import { MenuWrapper } from "./menu.styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -10,7 +11,6 @@ import {
   faListUl,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
-import "./menu.style.scss";
 
 interface IMenuView {
   onClickCollapsed: () => void;
@@ -18,7 +18,7 @@ interface IMenuView {
 }
 
 const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed }) => (
-  <div className="root-wrapper">
+  <MenuWrapper>
     <div className={`menu-principal ${isCollapsed ? "menu-principal-fechado" : ""}`}>
       <header className="menu-cabecalho">
         <div className="menu-cabecalho-icone-area">
@@ -104,7 +104,7 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed }) => (
     <div className={`conteudo ${isCollapsed ? "conteudo-fechado" : ""}`}>
       <Outlet />
     </div>
-  </div>
+  </MenuWrapper>
 );
 
 export default View;

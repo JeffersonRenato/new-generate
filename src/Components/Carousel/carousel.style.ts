@@ -1,4 +1,6 @@
-.carousel-wrap {
+import styled from "styled-components";
+
+export const CarouselWrapper = styled.div`
   margin: 10px 0;
   user-select: none;
 
@@ -81,4 +83,4 @@
       opacity: 0;
     }
   }
-}
+`;

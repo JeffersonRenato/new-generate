@@ -2,14 +2,14 @@ import { FC } from "react";
 import { Header } from "../../Components/Header";
 import { Carousel } from "../../Components/Carousel";
 import { ICarouselResponse } from "../../Services";
-import "./home.style.scss";
+import { HomeWrapper } from "./home.style";
 
 interface IProps {
   carousels: ICarouselResponse[];
 }
 
 const View: FC<IProps> = (props) => (
-  <div className="home-area">
+  <HomeWrapper>
     <Header />
     {
       props.carousels.map((carousel, index) => (
@@ -20,7 +20,7 @@ const View: FC<IProps> = (props) => (
         />
       ))
     }
-  </div>
+  </HomeWrapper>
 );
 
 export default View;
