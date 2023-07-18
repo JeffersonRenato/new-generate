@@ -25,7 +25,7 @@ export const AboutWrapper = styled.div`
     }
 
     .about-text {
-      color: #f1f1f1;
+      color: #fff;
       line-height: 1.5em;
       text-align: justify;
     }

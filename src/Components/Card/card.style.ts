@@ -1,11 +1,11 @@
 import styled from "styled-components";
+import { fontSize, fontWeight, color } from "../../Constants";
 
 export const CardWrapper = styled.div`
   width: 290px;
   height: fit-content;
-  background: #444;
+  background: ${color.cardBackground};
   border-radius: 25px;
-  color: #fff;
   overflow: hidden;
   transition: 0.5s;
 
@@ -14,33 +14,34 @@ export const CardWrapper = styled.div`
     opacity: 0.7;
   }
 
-  .card-area-imagem {
+  .card-image-area {
     height: auto;
     position: relative;
     overflow: hidden;
 
-    .card-imagem-principal {
+    .card-image {
       width: 290px;
     }
 
-    .card-icone-favorito {
+    .card-favorite-icon {
       position: absolute;
-      font-size: 1.2em;
       right: 10px;
       top: 10px;
+      font-size: ${fontSize.cardFavoriteIcon};
+      color: ${color.cardFavoriteIcon};
       transition: 0.5s;
 
       &:hover {
-        color: red;
+        color: ${color.cardFavoriteIconHover};
       }
     }
 
-    .card-icone-favorito-ativo {
-      color: red;
+    .card-favorite-icon-active {
+      color: ${color.cardFavoriteIconActive};
     }
   }
 
-  .card-area-descricao {
+  .card-description {
     height: 120px;
     padding: 0 20px;
     display: flex;
@@ -48,34 +49,43 @@ export const CardWrapper = styled.div`
     justify-content: space-around;
     text-align: center;
 
-    .card-autor {
-      font-size: 0.8em;
-      font-weight: 500;
+    .card-author {
+      font-size: ${fontSize.minorText};
+      font-weight: ${fontWeight.light};
       text-transform: uppercase;
-      color: #999;
+      color: ${color.cardAuthorName};
     }
 
-    .card-titulo {
-      font-size: 1em;
-      font-weight: 700;
+    .card-title {
+      font-size: ${fontSize.text};
+      font-weight: ${fontWeight.bold};
+      color: ${color.cardTitle};
     }
 
-    .card-duracao {
-      font-size: 0.75em;
-      font-weight: 700;
-      color: #999;
+    .card-length {
+      font-size: ${fontSize.description};
+      font-weight: ${fontWeight.bold};
+      color: ${color.cardLength};
     }
   }
 
-  .card-area-midia-descricao {
+  .card-midia-description {
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #666;
+    background-color: ${color.cardMidiaDescriptionBackground};
 
-    .card-icone-midia {
+    .card-midia-icon {
       margin-right: 10px;
+      font-size: ${fontSize.cardMidiaIcon};
+      color: ${color.cardMidiaIcon};
+    }
+
+    .card-midia-type {
+      font-size: ${fontSize.text};
+      font-weight: ${fontWeight.light};
+      color: ${color.cardType};
     }
   }
 `;

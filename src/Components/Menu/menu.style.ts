@@ -1,36 +1,37 @@
 import styled from "styled-components";
+import { color } from "../../Constants";
 
 export const MenuWrapper = styled.div`
   display: flex;
 
-  .menu-principal {
+  .menu {
     width: 200px;
     height: 100%;
     padding: 0 15px;
     position: fixed;
     z-index: 9;
-    background: #222;
+    background: ${color.menuBackgound};
     overflow: hidden;
     transition: 0.5s;
 
-    .menu-cabecalho {
+    .menu-header {
       display: flex;
       align-items: center;
       gap: 15px;
       margin-top: 10px;
     }
 
-    .menu-cabecalho-icone-area {
+    .menu-header-icon {
       width: 14px;
       display: flex;
       justify-content: center;
     }
 
-    .menu-hamburguer {
-      color: #fff;
+    .menu-hamburguer-icon {
+      color: ${color.menuHamburguerIcon};
     }
 
-    .imagem-logo {
+    .menu-logo-image {
       width: 130px;
       padding-top: 25px;
       padding-bottom: 15px;
@@ -38,15 +39,15 @@ export const MenuWrapper = styled.div`
       transition: 0.3s opacity, 0.5s visibility;
     }
 
-    .menu-navegacao {
+    .menu-navigation {
       padding: 25px 0;
     }
 
-    .router-dom-links {
+    .menu-router-dom-links {
       text-decoration: none;
     }
 
-    .menu-itens {
+    .menu-items {
       display: flex;
       padding: 12.5px 0;
       height: 1.2em;
@@ -54,28 +55,28 @@ export const MenuWrapper = styled.div`
       &:hover {
         cursor: pointer;
 
-        .menu-links-icones,
+        .menu-links-icons,
         .menu-links {
-          color: #999;
+          color: ${color.menuLinksHover};
         }
       }
     }
 
-    .menu-links-icones-area {
+    .menu-links-icons-area {
       width: 15px;
       display: flex;
       justify-content: center;
     }
 
-    .menu-links-icones {
-      color: #fff;
+    .menu-links-icons {
+      color: ${color.menuLinksIcons};
       transition: 0.5s color;
     }
 
     .menu-links {
       height: 100%;
       margin-left: 15px;
-      color: #fff;
+      color: ${color.menuLinks};
       user-select: none;
       white-space: nowrap;
       overflow: hidden;
@@ -84,34 +85,34 @@ export const MenuWrapper = styled.div`
     }
   }
 
-  .conteudo {
+  .content {
     padding-left: 230px;
     width: calc(100% - 230px);
     min-height: 100%;
-    background: #333;
+    background: ${color.contentBackground};
     transition: 0.5s;
   }
 
-  .menu-principal-fechado {
+  .menu-collapsed {
     width: 18px;
     padding: 0 15px;
 
-    .imagem-logo-fechado {
+    .menu-logo-image-collapsed {
       opacity: 0;
       visibility: hidden;
     }
 
-    .menu-links-icones-fechado {
+    .menu-links-icons-collapsed {
       margin-right: 0;
     }
 
-    .menu-links-fechado {
+    .menu-links-collapsed {
       opacity: 0;
       visibility: hidden;
     }
   }
 
-  .conteudo-fechado {
+  .content-collapsed {
     padding-left: 48px;
     width: calc(100% - 48px);
   }

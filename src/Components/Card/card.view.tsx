@@ -17,22 +17,22 @@ interface ICard {
 
 const View: FC<ICard> = ({ image, author, title, length, type, onClickFavorite, isFavorite }) => (
   <CardWrapper>
-    <div className="card-area-imagem">
-      <img className="card-imagem-principal" src={image} alt="Imagem do card" />
+    <div className="card-image-area">
+      <img className="card-image" src={image} alt="Imagem do card" />
       <FontAwesomeIcon
         icon={faHeart}
-        className={`card-icone-favorito ${isFavorite ? "card-icone-favorito-ativo" : ""}`}
+        className={`card-favorite-icon ${isFavorite ? "card-favorite-icon-active" : ""}`}
         onClick={onClickFavorite}
       />
     </div>
-    <div className="card-area-descricao">
-      <h3 className="card-autor">{author}</h3>
-      <p className="card-titulo">{title}</p>
-      <p className="card-duracao">{`Duração: ${length} min`}</p>
+    <div className="card-description">
+      <h5 className="card-author">{author}</h5>
+      <h4 className="card-title">{title}</h4>
+      <h6 className="card-length">{`Duração: ${length} min`}</h6>
     </div>
-    <div className="card-area-midia-descricao">
-      <FontAwesomeIcon icon={faVideo} className="card-icone-midia" />
-      <p className="card-midia-tipo">{type}</p>
+    <div className="card-midia-description">
+      <FontAwesomeIcon icon={faVideo} className="card-midia-icon" />
+      <h4 className="card-midia-type">{type}</h4>
     </div>
   </CardWrapper>
 );

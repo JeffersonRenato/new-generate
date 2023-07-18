@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { color, fontSize, fontWeight } from "../../Constants";
 
 export const CarouselWrapper = styled.div`
   margin: 10px 0;
@@ -6,9 +7,9 @@ export const CarouselWrapper = styled.div`
 
   .carousel-title {
     margin: 25px 60px;
-    font-size: 2em;
-    font-weight: 700;
-    color: #fff;
+    font-size: ${fontSize.title};
+    font-weight: ${fontWeight.bold};
+    color: ${color.carouselTitle};
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -55,17 +56,17 @@ export const CarouselWrapper = styled.div`
       transition: 0.5s background-color, 0.5s color;
 
       .carousel-arrow {
-        font-size: 2em;
-        color: #fff;
+        font-size: ${fontSize.carouselArrow};
+        color: ${color.carouselArrow};
         transition: 0.5s color, 0.5s opacity;
       }
 
       &:hover {
         cursor: pointer;
-        background-color: #fff;
+        background-color: ${color.carouselArrowBackgroundHover};
 
         .carousel-arrow {
-          color: #555;
+          color: ${color.carouselArrowHover};
         }
       }
     }
@@ -74,12 +75,12 @@ export const CarouselWrapper = styled.div`
       pointer-events: none;
     }
 
-    .disabled-arrow {
-      pointer-events: none;
+    .carousel-arrow-disabled {
       opacity: 0.1;
     }
 
     .carousel-arrow-hidden {
+      pointer-events: none;
       opacity: 0;
     }
   }

@@ -31,7 +31,7 @@ const View: FC<ICarouselView> = ({
   carouselContent,
 }) => (
   <CarouselWrapper>
-    <h3 className="carousel-title">{label}</h3>
+    <h1 className="carousel-title">{label}</h1>
     <div className="carousel-area">
       <div className="carousel-arrow-area carousel-arrow-area-left" onClick={onClickLeft}>
         <div
@@ -43,7 +43,7 @@ const View: FC<ICarouselView> = ({
         >
           <FontAwesomeIcon
             icon={faAngleLeft}
-            className={`carousel-arrow ${disabledArrowLeft ? "disabled-arrow" : ""}`}
+            className={`carousel-arrow ${disabledArrowLeft ? "carousel-arrow-disabled" : ""}`}
           />
         </div>
       </div>
@@ -71,7 +71,7 @@ const View: FC<ICarouselView> = ({
         >
           <FontAwesomeIcon
             icon={faAngleRight}
-            className={`carousel-arrow ${disabledArrowRight ? "disabled-arrow" : ""}`}
+            className={`carousel-arrow ${disabledArrowRight ? "carousel-arrow-disabled" : ""}`}
           />
         </div>
       </div>
