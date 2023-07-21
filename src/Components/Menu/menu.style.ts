@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { color } from "../../Constants";
+import { getColor } from "../../Constants";
 
-export const MenuWrapper = styled.div`
+export const MenuWrapper = styled.div<{ theme: string }>`
   display: flex;
 
   .menu {
@@ -10,7 +10,7 @@ export const MenuWrapper = styled.div`
     padding: 0 15px;
     position: fixed;
     z-index: 9;
-    background: ${color.menuBackgound};
+    background: ${(props) => getColor(props.theme, "grayLevel1")};
     overflow: hidden;
     transition: 0.5s;
 
@@ -28,7 +28,7 @@ export const MenuWrapper = styled.div`
     }
 
     .menu-hamburguer-icon {
-      color: ${color.menuHamburguerIcon};
+      color: ${(props) => getColor(props.theme, "whiteLevel1")};
     }
 
     .menu-logo-image {
@@ -57,26 +57,26 @@ export const MenuWrapper = styled.div`
 
         .menu-links-icons,
         .menu-links {
-          color: ${color.menuLinksHover};
+          color: ${(props) => getColor(props.theme, "grayLevel5")};
         }
       }
     }
 
-    .menu-links-icons-area {
+    .menu-links-icons-wrapper {
       width: 15px;
       display: flex;
       justify-content: center;
     }
 
     .menu-links-icons {
-      color: ${color.menuLinksIcons};
+      color: ${(props) => getColor(props.theme, "whiteLevel1")};
       transition: 0.5s color;
     }
 
     .menu-links {
       height: 100%;
       margin-left: 15px;
-      color: ${color.menuLinks};
+      color: ${(props) => getColor(props.theme, "whiteLevel1")};
       user-select: none;
       white-space: nowrap;
       overflow: hidden;
@@ -89,7 +89,7 @@ export const MenuWrapper = styled.div`
     padding-left: 230px;
     width: calc(100% - 230px);
     min-height: 100%;
-    background: ${color.contentBackground};
+    background: ${(props) => getColor(props.theme, "grayLevel2")};
     transition: 0.5s;
   }
 

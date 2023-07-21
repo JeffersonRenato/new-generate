@@ -6,21 +6,22 @@ import { ContentWrapper } from "./content.style";
 interface IProps {
   content: IContentResponse | null;
   formatedType: string;
+  theme: string;
 }
 
-const View: FC<IProps> = ({ content, formatedType }) => (
-  <ContentWrapper>
-    <div className="content-area">
-      <div className="content-title-area">
+const View: FC<IProps> = ({ content, formatedType, theme }) => (
+  <ContentWrapper theme={theme}>
+    <div className="content-wrapper">
+      <div className="content-title-wrapper">
         <h1 className="content-title">{content?.title}</h1>
       </div>
       <div className="player-wrapper">
         <ReactPlayer className="react-player" url={content?.url} controls width="100%" height="100%" />
       </div>
-      <div className="content-description-area">
+      <div className="content-description-wrapper">
         <p className="content-description">{content?.description}</p>
       </div>
-      <div className="content-tag-wrap">
+      <div className="content-tag-wrapper">
         <div className="content-tag-area">
           <p className="content-tag-title">Autor:</p>
           <p className="content-tag">{content?.author}</p>

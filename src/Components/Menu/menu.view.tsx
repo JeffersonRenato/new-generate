@@ -15,11 +15,14 @@ import {
 interface IMenuView {
   onClickCollapsed: () => void;
   isCollapsed: boolean;
+  onClick: () => void;
+  theme: string;
 }
 
-const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed }) => (
-  <MenuWrapper>
+const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed, onClick, theme }) => (
+  <MenuWrapper theme={theme}>
     <div className={`menu ${isCollapsed ? "menu-collapsed" : ""}`}>
+    <button onClick={onClick}>tema</button>
       <header className="menu-header">
         <div className="menu-header-icon">
           <FontAwesomeIcon icon={faBars} onClick={onClickCollapsed} className="menu-hamburguer-icon" />
@@ -34,7 +37,7 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed }) => (
         <ul className="menu-list">
           <Link to={`/home`} className="menu-router-dom-links">
             <li className="menu-items">
-              <div className="menu-links-icons-area">
+              <div className="menu-links-icons-wrapper">
                 <FontAwesomeIcon
                   icon={faHome}
                   className={`menu-links-icons ${isCollapsed ? "menu-links-icons-collapsed" : ""}`}
@@ -45,7 +48,7 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed }) => (
           </Link>
           <Link to={`/pesquisar`} className="menu-router-dom-links">
             <li className="menu-items">
-              <div className="menu-links-icons-area">
+              <div className="menu-links-icons-wrapper">
                 <FontAwesomeIcon
                   icon={faSearch}
                   className={`menu-links-icons ${isCollapsed ? "menu-links-icons-collapsed" : ""}`}
@@ -56,7 +59,7 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed }) => (
           </Link>
           <Link to={`/favoritos`} className="menu-router-dom-links">
             <li className="menu-items">
-              <div className="menu-links-icons-area">
+              <div className="menu-links-icons-wrapper">
                 <FontAwesomeIcon
                   icon={faHeart}
                   className={`menu-links-icons ${isCollapsed ? "menu-links-icons-collapsed" : ""}`}
@@ -67,7 +70,7 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed }) => (
           </Link>
           <Link to={`/playlist`} className="menu-router-dom-links">
             <li className="menu-items">
-              <div className="menu-links-icons-area">
+              <div className="menu-links-icons-wrapper">
                 <FontAwesomeIcon
                   icon={faListUl}
                   className={`menu-links-icons ${isCollapsed ? "menu-links-icons-collapsed" : ""}`}
@@ -78,7 +81,7 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed }) => (
           </Link>
           <Link to={`/sobre`} className="menu-router-dom-links">
             <li className="menu-items">
-              <div className="menu-links-icons-area">
+              <div className="menu-links-icons-wrapper">
                 <FontAwesomeIcon
                   icon={faCircleQuestion}
                   className={`menu-links-icons ${isCollapsed ? "menu-links-icons-collapsed" : ""}`}
@@ -89,7 +92,7 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed }) => (
           </Link>
           <Link to={`/doacoes`} className="menu-router-dom-links">
             <li className="menu-items">
-              <div className="menu-links-icons-area">
+              <div className="menu-links-icons-wrapper">
                 <FontAwesomeIcon
                   icon={faHandHoldingHeart}
                   className={`menu-links-icons ${isCollapsed ? "menu-links-icons-collapsed" : ""}`}

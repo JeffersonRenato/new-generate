@@ -5,17 +5,18 @@ import { CARD_SIZE } from "./constants";
 
 import View from "./carousel.view";
 import ICarousel from "./carousel.props";
+import { useTheme } from "../../Contexts/States/theme";
 
 const Carousel: FC<ICarousel> = ({ label, cards }) => {
   const [left, setLeft] = useState(0);
   const [disabledArrowLeft, setDisabledArrowLeft] = useState(true);
   const [disabledArrowRight, setDisabledArrowRight] = useState(false);
   const [hiddenArrow, setHiddenArrow] = useState(false);
-  const carouselContentArea = useRef<HTMLDivElement>(null);
+  const carouselContentWrapper = useRef<HTMLDivElement>(null);
   const carouselContent = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const externalElement = carouselContentArea?.current;
+    const externalElement = carouselContentWrapper?.current;
     const internalElement = carouselContent?.current;
 
     if (!externalElement || !internalElement) return;
@@ -36,7 +37,7 @@ const Carousel: FC<ICarousel> = ({ label, cards }) => {
   }, []);
 
   const handleClick = (position: "left" | "right") => {
-    const wrapperWidth = carouselContentArea?.current?.clientWidth || 0;
+    const wrapperWidth = carouselContentWrapper?.current?.clientWidth || 0;
     const innerWidth = carouselContent?.current?.clientWidth || 0;
     let updatedLeft = left;
 
@@ -63,6 +64,8 @@ const Carousel: FC<ICarousel> = ({ label, cards }) => {
   const onClickLeft = () => handleClick("left");
   const onClickRight = () => handleClick("right");
 
+  const [theme] = useTheme()
+
   return (
     <View
       left={left}
@@ -73,8 +76,9 @@ const Carousel: FC<ICarousel> = ({ label, cards }) => {
       hiddenArrow={hiddenArrow}
       label={label}
       cards={cards}
-      carouselContentArea={carouselContentArea}
+      carouselContentWrapper={carouselContentWrapper}
       carouselContent={carouselContent}
+      theme={theme}
     />
   );
 };

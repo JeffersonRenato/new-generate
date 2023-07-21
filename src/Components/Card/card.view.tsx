@@ -13,11 +13,12 @@ interface ICard {
   type: ITypeCard;
   onClickFavorite: () => void;
   isFavorite: boolean;
+  theme: string;
 }
 
-const View: FC<ICard> = ({ image, author, title, length, type, onClickFavorite, isFavorite }) => (
-  <CardWrapper>
-    <div className="card-image-area">
+const View: FC<ICard> = ({ image, author, title, length, type, onClickFavorite, isFavorite, theme }) => (
+  <CardWrapper theme={theme}>
+    <div className="card-image-wrapper">
       <img className="card-image" src={image} alt="Imagem do card" />
       <FontAwesomeIcon
         icon={faHeart}
@@ -25,12 +26,12 @@ const View: FC<ICard> = ({ image, author, title, length, type, onClickFavorite, 
         onClick={onClickFavorite}
       />
     </div>
-    <div className="card-description">
-      <h5 className="card-author">{author}</h5>
-      <h4 className="card-title">{title}</h4>
-      <h6 className="card-length">{`Duração: ${length} min`}</h6>
+    <div className="card-info-wrapper">
+      <h5 className="card-info-author">{author}</h5>
+      <h4 className="card-info-title">{title}</h4>
+      <h6 className="card-info-length">{`Duração: ${length} min`}</h6>
     </div>
-    <div className="card-midia-description">
+    <div className="card-midia">
       <FontAwesomeIcon icon={faVideo} className="card-midia-icon" />
       <h4 className="card-midia-type">{type}</h4>
     </div>

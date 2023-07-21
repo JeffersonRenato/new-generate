@@ -1,24 +1,25 @@
 import styled from "styled-components";
+import { fontSize, fontWeight, getColor } from "../../Constants";
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled.div<{ theme: string }>`
   display: flex;
   justify-content: space-around;
   height: 100vh;
 
-  .content-area {
+  .content-wrapper {
     width: 60%;
     height: 100%;
     display: flex;
     flex-direction: column;
     margin-left: 25px;
-    color: #fff;
+    color: ${(props) => getColor(props.theme, "whiteLevel1")};
 
-    .content-title-area {
+    .content-title-wrapper {
       margin: 20px 0;
 
       .content-title {
-        font-size: 2em;
-        font-weight: 700;
+        font-size: ${fontSize.title};
+        font-weight: ${fontWeight.bold};
       }
     }
 
@@ -33,11 +34,11 @@ export const ContentWrapper = styled.div`
       }
     }
 
-    .content-description-area {
+    .content-description-wrapper {
       margin: 20px 0;
     }
 
-    .content-tag-wrap {
+    .content-tag-wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -46,13 +47,15 @@ export const ContentWrapper = styled.div`
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
+        margin-right: 20px;
+        margin-bottom: 10px;
 
         .content-tag-title {
-          font-weight: 700;
+          font-weight: ${fontWeight.bold};
         }
 
         .content-tag {
-          font-weight: 300;
+          font-weight: ${fontWeight.light};
         }
       }
     }

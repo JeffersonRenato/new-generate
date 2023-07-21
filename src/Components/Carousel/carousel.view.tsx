@@ -14,8 +14,9 @@ interface ICarouselView {
   hiddenArrow: boolean;
   label: string;
   cards: Array<ICard>;
-  carouselContentArea: React.RefObject<HTMLDivElement>;
+  carouselContentWrapper: React.RefObject<HTMLDivElement>;
   carouselContent: React.RefObject<HTMLDivElement>;
+  theme: string;
 }
 
 const View: FC<ICarouselView> = ({
@@ -27,13 +28,14 @@ const View: FC<ICarouselView> = ({
   hiddenArrow,
   label,
   cards,
-  carouselContentArea,
+  carouselContentWrapper,
   carouselContent,
+  theme
 }) => (
-  <CarouselWrapper>
+  <CarouselWrapper theme={theme}>
     <h1 className="carousel-title">{label}</h1>
-    <div className="carousel-area">
-      <div className="carousel-arrow-area carousel-arrow-area-left" onClick={onClickLeft}>
+    <div className="carousel-wrapper">
+      <div className="carousel-arrow-wrapper carousel-arrow-left-wrapper" onClick={onClickLeft}>
         <div
           className={`
           carousel-arrow-hover
@@ -47,7 +49,7 @@ const View: FC<ICarouselView> = ({
           />
         </div>
       </div>
-      <div className="carousel-content-area" ref={carouselContentArea}>
+      <div className="carousel-content-wrapper" ref={carouselContentWrapper}>
         <div className="carousel-content" style={{ marginLeft: -left }} ref={carouselContent}>
           {cards.map((card) => (
             <Card
@@ -61,7 +63,7 @@ const View: FC<ICarouselView> = ({
           ))}
         </div>
       </div>
-      <div className="carousel-arrow-area carousel-arrow-area-right" onClick={onClickRight}>
+      <div className="carousel-arrow-wrapper carousel-arrow-right-wrapper" onClick={onClickRight}>
         <div
           className={`
           carousel-arrow-hover

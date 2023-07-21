@@ -3,6 +3,7 @@ import View from "./content.view";
 import { FC, useState, useEffect, useMemo } from "react";
 import { IContentResponse } from "../../Services";
 import ServiceContent from "../../Services/content/content.service";
+import { useTheme } from "../../Contexts/States/theme";
 
 const Content: FC = () => {
   const { id } = useParams();
@@ -35,7 +36,9 @@ const Content: FC = () => {
 
   const formatedType = checkType(content?.type || "");
 
-  return <View content={content} formatedType={formatedType} />;
+  const [theme] = useTheme();
+
+  return <View content={content} formatedType={formatedType} theme={theme} />;
 };
 
 export default Content;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { color, fontSize, fontWeight } from "../../Constants";
+import { fontSize, fontWeight, getColor } from "../../Constants";
 
-export const CarouselWrapper = styled.div`
+export const CarouselWrapper = styled.div<{ theme: string }>`
   margin: 10px 0;
   user-select: none;
 
@@ -9,13 +9,13 @@ export const CarouselWrapper = styled.div`
     margin: 25px 60px;
     font-size: ${fontSize.title};
     font-weight: ${fontWeight.bold};
-    color: ${color.carouselTitle};
+    color: ${(props) => getColor(props.theme, "whiteLevel1")};
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  .carousel-area {
+  .carousel-wrapper {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -23,7 +23,7 @@ export const CarouselWrapper = styled.div`
     gap: 0.5em;
     position: relative;
 
-    .carousel-content-area {
+    .carousel-content-wrapper {
       width: 95%;
       display: flex;
       justify-content: flex-start;
@@ -36,12 +36,12 @@ export const CarouselWrapper = styled.div`
       }
     }
 
-    .carousel-arrow-area-left {
+    .carousel-arrow-left-wrapper {
       padding-left: 15px;
       padding-right: 5px;
     }
 
-    .carousel-arrow-area-right {
+    .carousel-arrow-right-wrapper {
       padding-left: 5px;
       padding-right: 15px;
     }
@@ -57,16 +57,16 @@ export const CarouselWrapper = styled.div`
 
       .carousel-arrow {
         font-size: ${fontSize.carouselArrow};
-        color: ${color.carouselArrow};
+        color: ${(props) => getColor(props.theme, "whiteLevel1")};
         transition: 0.5s color, 0.5s opacity;
       }
 
       &:hover {
         cursor: pointer;
-        background-color: ${color.carouselArrowBackgroundHover};
+        background-color: ${(props) => getColor(props.theme, "whiteLevel1")};
 
         .carousel-arrow {
-          color: ${color.carouselArrowHover};
+          color: ${(props) => getColor(props.theme, "grayLevel3")};
         }
       }
     }

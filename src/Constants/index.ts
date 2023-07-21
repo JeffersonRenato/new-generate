@@ -1,5 +1,7 @@
+import colorDark from "./colorDark";
+import colorLight from "./colorLight";
 import fontSize from "./fontSize";
 import fontWeight from "./fontWeight";
-import color from "./color";
+import getColor from "./getColor";
 
-export { fontSize, fontWeight, color };
+export { colorDark, colorLight, fontSize, fontWeight, getColor };
