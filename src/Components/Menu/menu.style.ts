@@ -27,10 +27,16 @@ export const MenuWrapper = styled.div<{ theme: string }>`
       width: 14px;
       display: flex;
       justify-content: center;
-    }
 
-    .menu-hamburguer-icon {
-      color: ${(props) => getColor(props.theme, "whiteLevel1")};
+      .menu-hamburguer-icon {
+        color: ${(props) => getColor(props.theme, "whiteLevel1")};
+        transition: 0.5s;
+
+        &:hover {
+          cursor: pointer;
+          color: ${(props) => getColor(props.theme, "grayLevel5")};
+        }
+      }
     }
 
     .menu-logo-image {
@@ -86,17 +92,46 @@ export const MenuWrapper = styled.div<{ theme: string }>`
       transition: 0.5s;
     }
 
-    .menu-theme-toogle-wrapper {
-      width: 18px;
+    .menu-footer-wrapper {
       display: flex;
       flex: 1;
       align-items: end;
-      justify-content: center;
+      gap: 10px;
+      padding-bottom: 10px;
 
-      .menu-theme-toogle {
-        font-size: ${fontSize.menuThemeToogle};
+      .menu-theme-toogle-wrapper {
+        width: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .menu-theme-toogle {
+          font-size: ${fontSize.menuThemeToogle};
+          color: ${(props) => getColor(props.theme, "whiteLevel1")};
+          transition: 0.5s;
+
+          &:hover {
+            cursor: pointer;
+            color: ${(props) => getColor(props.theme, "grayLevel5")};
+          }
+        }
+      }
+
+      .menu-footer-link {
+        font-size: ${fontSize.description};
         color: ${(props) => getColor(props.theme, "whiteLevel1")};
-        padding-bottom: 10px;
+        text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        user-select: none;
+        margin-left: 20px;
+        margin-bottom: 5px;
+        transition: 0.5s;
+
+        &:hover {
+          color: ${(props) => getColor(props.theme, "grayLevel5")};
+        }
       }
     }
   }
@@ -123,6 +158,11 @@ export const MenuWrapper = styled.div<{ theme: string }>`
     }
 
     .menu-links-collapsed {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .menu-footer-link-collapsed {
       opacity: 0;
       visibility: hidden;
     }

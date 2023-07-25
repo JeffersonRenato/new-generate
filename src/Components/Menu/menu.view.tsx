@@ -4,6 +4,7 @@ import { MenuWrapper } from "./menu.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
+  faCircleHalfStroke,
   faCircleQuestion,
   faHandHoldingHeart,
   faHeart,
@@ -104,8 +105,22 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed, onClick, theme }) 
           </Link>
         </ul>
       </nav>
-      <div className="menu-theme-toogle-wrapper">
-        <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} onClick={onClick} className="menu-theme-toogle" />
+      <div className="menu-footer-wrapper">
+        <div className="menu-theme-toogle-wrapper">
+          <FontAwesomeIcon
+            icon={faCircleHalfStroke}
+            rotation={theme === "dark" ? undefined : 180}
+            onClick={onClick}
+            className="menu-theme-toogle"
+          />
+        </div>
+        <a
+          className={`menu-footer-link ${isCollapsed ? "menu-footer-link-collapsed" : ""}`}
+          href="https://generate.focolare.org/pt-pt/"
+          target="_blank"
+        >
+          Baseado em GENerate
+        </a>
       </div>
     </div>
     <div className={`content ${isCollapsed ? "content-collapsed" : ""}`}>
