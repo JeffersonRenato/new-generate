@@ -12,7 +12,7 @@ export const AboutWrapper = styled.div<{ theme: string }>`
     .about-title {
       font-size: ${fontSize.title};
       font-weight: ${fontWeight.bold};
-      color: ${(props) => getColor(props.theme, "whiteLevel1", true)};
+      color: ${(props) => getColor(props.theme, "whiteLevel1")};
     }
   }
   .about-paragraph-wrapper {
@@ -22,11 +22,11 @@ export const AboutWrapper = styled.div<{ theme: string }>`
 
     .about-subtitle {
       font-size: ${fontSize.subtitle};
-      /* color: ${(props) => getColor(props.theme, "orangeLevel1")}; */
+      color: ${(props) => getColor(props.theme, "orangeLevel1")};
     }
 
     .about-text {
-      /* color: ${(props) => getColor(props.theme, "whiteLevel1")}; */
+      color: ${(props) => getColor(props.theme, "whiteLevel1")};
       line-height: 1.5em;
       text-align: justify;
     }

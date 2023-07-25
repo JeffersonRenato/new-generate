@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
-import View from "./menu.view";
 import { useTheme } from "../../Contexts/States/theme";
+import View from "./menu.view";
 
 const Menu: FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);

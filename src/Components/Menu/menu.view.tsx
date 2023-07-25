@@ -9,7 +9,9 @@ import {
   faHeart,
   faHome,
   faListUl,
+  faMoon,
   faSearch,
+  faSun,
 } from "@fortawesome/free-solid-svg-icons";
 
 interface IMenuView {
@@ -22,14 +24,13 @@ interface IMenuView {
 const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed, onClick, theme }) => (
   <MenuWrapper theme={theme}>
     <div className={`menu ${isCollapsed ? "menu-collapsed" : ""}`}>
-    <button onClick={onClick}>tema</button>
       <header className="menu-header">
         <div className="menu-header-icon">
           <FontAwesomeIcon icon={faBars} onClick={onClickCollapsed} className="menu-hamburguer-icon" />
         </div>
         <img
           className={`menu-logo-image ${isCollapsed ? "menu-logo-image-collapsed" : ""}`}
-          src="/image/logo-dark.png"
+          src={theme === "dark" ? "/image/logo-dark.png" : "/image/logo-light.png"}
           alt="Logo do GENerate"
         />
       </header>
@@ -103,6 +104,9 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed, onClick, theme }) 
           </Link>
         </ul>
       </nav>
+      <div className="menu-theme-toogle-wrapper">
+        <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} onClick={onClick} className="menu-theme-toogle" />
+      </div>
     </div>
     <div className={`content ${isCollapsed ? "content-collapsed" : ""}`}>
       <Outlet />

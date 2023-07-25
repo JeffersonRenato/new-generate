@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import { getColor } from "../../Constants";
+import { fontSize, getColor } from "../../Constants";
 
 export const MenuWrapper = styled.div<{ theme: string }>`
   display: flex;
 
   .menu {
+    display: flex;
+    flex-direction: column;
     width: 200px;
     height: 100%;
     padding: 0 15px;
@@ -36,7 +38,7 @@ export const MenuWrapper = styled.div<{ theme: string }>`
       padding-top: 25px;
       padding-bottom: 15px;
       user-select: none;
-      transition: 0.3s opacity, 0.5s visibility;
+      transition: 0.5s;
     }
 
     .menu-navigation {
@@ -70,7 +72,7 @@ export const MenuWrapper = styled.div<{ theme: string }>`
 
     .menu-links-icons {
       color: ${(props) => getColor(props.theme, "whiteLevel1")};
-      transition: 0.5s color;
+      transition: 0.5s;
     }
 
     .menu-links {
@@ -81,7 +83,21 @@ export const MenuWrapper = styled.div<{ theme: string }>`
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      transition: 0.5s color, 0.3s opacity, 0.5s visibility;
+      transition: 0.5s;
+    }
+
+    .menu-theme-toogle-wrapper {
+      width: 18px;
+      display: flex;
+      flex: 1;
+      align-items: end;
+      justify-content: center;
+
+      .menu-theme-toogle {
+        font-size: ${fontSize.menuThemeToogle};
+        color: ${(props) => getColor(props.theme, "whiteLevel1")};
+        padding-bottom: 10px;
+      }
     }
   }
 

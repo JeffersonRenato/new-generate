@@ -78,7 +78,7 @@ export const CardWrapper = styled.div<{ theme: string }>`
 
     .card-midia-icon {
       margin-right: 10px;
-      font-size: ${fontSize.cardMidiaIcon};
+      font-size: ${fontSize.cardMediaIcon};
       color: ${(props) => getColor(props.theme, "whiteLevel1")};
     }
 

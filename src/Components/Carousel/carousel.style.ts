@@ -58,7 +58,7 @@ export const CarouselWrapper = styled.div<{ theme: string }>`
       .carousel-arrow {
         font-size: ${fontSize.carouselArrow};
         color: ${(props) => getColor(props.theme, "whiteLevel1")};
-        transition: 0.5s color, 0.5s opacity;
+        transition: 0.5s;
       }
 
       &:hover {

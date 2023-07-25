@@ -6,8 +6,9 @@ const fontSize = {
   subtitle: "24px",
   title: "32px",
   cardFavoriteIcon: "20px",
-  cardMidiaIcon: "16px",
+  cardMediaIcon: "16px",
   carouselArrow: "32px",
+  menuThemeToogle: "24px",
 };
 
 export default fontSize;
