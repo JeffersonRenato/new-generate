@@ -92,9 +92,29 @@ export const MenuWrapper = styled.div<{ theme: string }>`
       transition: 0.5s;
     }
 
-    .menu-footer-wrapper {
+    .menu-select-language-wrapper {
       display: flex;
       flex: 1;
+      flex-direction: column;
+      align-items: start;
+      justify-content: end;
+      margin-left: -2px;
+      margin-bottom: 50px;
+
+      .menu-select-language {
+        font-size: ${fontSize.minorText};
+        color: ${(props) => getColor(props.theme, "whiteLevel1")};
+        background: ${(props) => getColor(props.theme, "grayLevel2")};
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .menu-footer-wrapper {
+      display: flex;
+      /* flex: 1; */
       align-items: end;
       gap: 10px;
       padding-bottom: 10px;

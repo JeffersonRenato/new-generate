@@ -19,7 +19,7 @@ interface ICard {
 const View: FC<ICard> = ({ image, author, title, length, type, onClickFavorite, isFavorite, theme }) => (
   <CardWrapper theme={theme}>
     <div className="card-image-wrapper">
-      <img className="card-image" src={image} alt="Imagem do card" />
+      <img className="card-image" draggable="false" src={image} alt="Imagem do card" />
       <FontAwesomeIcon
         icon={faHeart}
         className={`card-favorite-icon ${isFavorite ? "card-favorite-icon-active" : ""}`}
