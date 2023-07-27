@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Outlet, Link } from "react-router-dom";
-import languageOptions from "../../Constants/languages";
+import languageOptions from "./constants/languages";
 import { MenuWrapper } from "./menu.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

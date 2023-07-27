@@ -1,0 +1,10 @@
+{
+  "MENU": {
+    "HOME": "Início",
+    "SEARCH": "Pesquisar",
+    "FAVORITES": "Favoritos",
+    "PLAYLIST": "Playlist",
+    "ABOUT": "Sobre GENerate",
+    "DONATE": "Doações"
+  }
+}
