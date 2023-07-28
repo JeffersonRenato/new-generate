@@ -11,6 +11,7 @@ const View: FC<IProps> = ({ theme }) => (
       <img
         src={`${theme === "dark" ? "/image/under-construction-dark.svg" : "/image/under-construction-light.svg"}`}
         className="under-construction-image"
+        draggable={false}
       />
     </div>
   </PlaylistWrapper>

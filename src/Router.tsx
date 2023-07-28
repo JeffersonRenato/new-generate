@@ -18,11 +18,11 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "pesquisar",
+        path: "search",
         element: <Search />,
       },
       {
-        path: "favoritos",
+        path: "favorites",
         element: <Favorites />,
       },
       {
@@ -30,11 +30,11 @@ const router = createBrowserRouter([
         element: <Playlist />,
       },
       {
-        path: "sobre",
+        path: "about",
         element: <About />,
       },
       {
-        path: "doacoes",
+        path: "donate",
         element: <Donate />,
       },
       {

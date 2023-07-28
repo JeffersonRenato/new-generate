@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { fontSize, getColor } from "../../Constants";
 
-export const MenuWrapper = styled.div<{ theme: string}>`
+export const MenuWrapper = styled.div<{ theme: string }>`
   display: flex;
+  user-select: none;
 
   .menu {
     display: flex;
@@ -102,13 +103,15 @@ export const MenuWrapper = styled.div<{ theme: string}>`
       flex-direction: column;
       align-items: start;
       justify-content: end;
-      margin-left: -2px;
+      margin-left: -6px;
       margin-bottom: 50px;
 
       .menu-select-language {
+        width: auto;
         font-size: ${fontSize.minorText};
         color: ${(props) => getColor(props.theme, "whiteLevel1")};
         background: ${(props) => getColor(props.theme, "grayLevel2")};
+        user-select: none;
 
         &:hover {
           cursor: pointer;
@@ -184,6 +187,21 @@ export const MenuWrapper = styled.div<{ theme: string}>`
     .menu-links-collapsed {
       opacity: 0;
       visibility: hidden;
+    }
+
+    .menu-select-language-collapsed {
+      width: 30px;
+      font-size: ${fontSize.minorText};
+      color: ${(props) => getColor(props.theme, "whiteLevel1")};
+      background: ${(props) => getColor(props.theme, "grayLevel2")};
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      user-select: none;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .menu-footer-link-collapsed {

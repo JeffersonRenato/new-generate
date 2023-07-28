@@ -29,7 +29,7 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed, onClickTheme, them
         <div className="menu-header-icon">
           <FontAwesomeIcon icon={faBars} onClick={onClickCollapsed} className="menu-hamburguer-icon" />
         </div>
-        <Link to={"/home"}>
+        <Link to={"/home"} draggable={false}>
           <img
             className={`menu-logo-image ${isCollapsed ? "menu-logo-image-collapsed" : ""}`}
             src={theme === "dark" ? "/image/logo-dark.png" : "/image/logo-light.png"}
@@ -51,7 +51,7 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed, onClickTheme, them
               <div className={`menu-links ${isCollapsed ? "menu-links-collapsed" : ""}`}>Início</div>
             </li>
           </Link>
-          <Link to={"/pesquisar"} className="menu-router-dom-links" draggable="false">
+          <Link to={"/search"} className="menu-router-dom-links" draggable="false">
             <li className="menu-items">
               <div className="menu-links-icons-wrapper">
                 <FontAwesomeIcon
@@ -62,7 +62,7 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed, onClickTheme, them
               <div className={`menu-links ${isCollapsed ? "menu-links-collapsed" : ""}`}>Pesquisar</div>
             </li>
           </Link>
-          <Link to={"/favoritos"} className="menu-router-dom-links" draggable="false">
+          <Link to={"/favorites"} className="menu-router-dom-links" draggable="false">
             <li className="menu-items">
               <div className="menu-links-icons-wrapper">
                 <FontAwesomeIcon
@@ -84,7 +84,7 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed, onClickTheme, them
               <div className={`menu-links ${isCollapsed ? "menu-links-collapsed" : ""}`}>Playlist</div>
             </li>
           </Link>
-          <Link to={"/sobre"} className="menu-router-dom-links" draggable="false">
+          <Link to={"/about"} className="menu-router-dom-links" draggable="false">
             <li className="menu-items">
               <div className="menu-links-icons-wrapper">
                 <FontAwesomeIcon
@@ -95,7 +95,7 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed, onClickTheme, them
               <div className={`menu-links ${isCollapsed ? "menu-links-collapsed" : ""}`}>Sobre GENerate</div>
             </li>
           </Link>
-          <Link to={"/doacoes"} className="menu-router-dom-links" draggable="false">
+          <Link to={"/donate"} className="menu-router-dom-links" draggable="false">
             <li className="menu-items">
               <div className="menu-links-icons-wrapper">
                 <FontAwesomeIcon
@@ -109,7 +109,10 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed, onClickTheme, them
         </ul>
       </nav>
       <div className="menu-select-language-wrapper">
-        <select onChange={onChangeLanguage} className="menu-select-language">
+        <select
+          onChange={onChangeLanguage}
+          className={`${isCollapsed ? "menu-select-language-collapsed" : "menu-select-language"}`}
+        >
           {languageOptions.map((option) => (
             <option key={option.value} value={option.value}>
               {option.label}
