@@ -1,9 +1,17 @@
+import { FC } from "react";
 import { PlaylistWrapper } from "./playlist.style";
 
-const View = () => (
+interface IProps {
+  theme: string;
+}
+
+const View: FC<IProps> = ({ theme }) => (
   <PlaylistWrapper>
     <div className="under-construction-image-wrapper">
-      <img src={require("../under-construction.svg").default} className="under-construction-image" />
+      <img
+        src={`${theme === "dark" ? "/image/under-construction-dark.svg" : "/image/under-construction-light.svg"}`}
+        className="under-construction-image"
+      />
     </div>
   </PlaylistWrapper>
 );

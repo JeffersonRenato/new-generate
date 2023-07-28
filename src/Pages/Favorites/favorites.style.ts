@@ -11,7 +11,7 @@ export const FavoritesWrapper = styled.div`
     justify-content: center;
 
     .under-construction-image {
-      width: 100%;
+      width: 90%;
     }
   }
 `;
