@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { fontSize, fontWeight, getColor } from "../../Constants";
 
 export const AboutWrapper = styled.div<{ theme: string }>`
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 1em;
+  min-height: 100vh;
   margin: 25px;
 
   .about-title-wrapper {

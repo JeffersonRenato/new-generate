@@ -2,7 +2,9 @@ import { FavoritesWrapper } from "./favorites.style";
 
 const View = () => (
   <FavoritesWrapper>
-    Favorites
+    <div className="under-construction-image-wrapper">
+      <img src={require("../under-construction.svg").default} className="under-construction-image" />
+    </div>
   </FavoritesWrapper>
 );
 

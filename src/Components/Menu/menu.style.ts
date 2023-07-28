@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { fontSize, getColor } from "../../Constants";
 
-export const MenuWrapper = styled.div<{ theme: string }>`
+export const MenuWrapper = styled.div<{ theme: string}>`
   display: flex;
 
   .menu {
@@ -45,6 +45,10 @@ export const MenuWrapper = styled.div<{ theme: string }>`
       padding-bottom: 15px;
       user-select: none;
       transition: 0.5s;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .menu-navigation {
@@ -114,7 +118,6 @@ export const MenuWrapper = styled.div<{ theme: string }>`
 
     .menu-footer-wrapper {
       display: flex;
-      /* flex: 1; */
       align-items: end;
       gap: 10px;
       padding-bottom: 10px;
@@ -160,6 +163,7 @@ export const MenuWrapper = styled.div<{ theme: string }>`
     padding-left: 230px;
     width: calc(100% - 230px);
     min-height: 100%;
+    padding-bottom: 75px;
     background: ${(props) => getColor(props.theme, "grayLevel2")};
     transition: 0.5s;
   }

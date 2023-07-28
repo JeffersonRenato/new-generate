@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
 import { Card } from "../Card";
 import { ICard } from "../../Services";
 import { CarouselWrapper } from "./carousel.style";
@@ -30,7 +31,7 @@ const View: FC<ICarouselView> = ({
   cards,
   carouselContentWrapper,
   carouselContent,
-  theme
+  theme,
 }) => (
   <CarouselWrapper theme={theme}>
     <h1 className="carousel-title">{label}</h1>
@@ -52,14 +53,16 @@ const View: FC<ICarouselView> = ({
       <div className="carousel-content-wrapper" ref={carouselContentWrapper}>
         <div className="carousel-content" style={{ marginLeft: -left }} ref={carouselContent}>
           {cards.map((card) => (
-            <Card
-              id={card.id}
-              image={card.image}
-              author={card.author}
-              title={card.title}
-              length={card.length}
-              type={card.type}
-            />
+            <Link to={`/content/${card.id}`} className="carousel-content-card-link">
+              <Card
+                id={card.id}
+                image={card.image}
+                author={card.author}
+                title={card.title}
+                length={card.length}
+                type={card.type}
+              />
+            </Link>
           ))}
         </div>
       </div>

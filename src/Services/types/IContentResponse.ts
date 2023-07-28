@@ -5,7 +5,7 @@ interface IContentResponse {
   author: string;
   data: string;
   type: string;
-  time: number;
+  length: number;
   tags: Array<string> | null;
 }
 

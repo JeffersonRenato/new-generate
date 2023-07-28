@@ -7,7 +7,7 @@ const CONTENT: any = {
     author: "KARRAM MARGARET",
     data: "11/09/2022",
     type: "VIDEO",
-    time: "32",
+    length: "32",
     tags: ["AMARELO"],
   },
   2: {
@@ -18,7 +18,7 @@ const CONTENT: any = {
     author: "LUBICH CHIARA",
     data: "13/08/1963",
     type: "VIDEO",
-    time: "3",
+    length: "3",
     tags: ["DESOLADA", "IDEAL", "OBRA DE MARIA"],
   },
   3: {
@@ -29,7 +29,7 @@ const CONTENT: any = {
     author: "LUBICH CHIARA",
     data: "02/06/1976",
     type: "VIDEO",
-    time: "8",
+    length: "8",
     tags: ["CHIARA", "DISÍGNÍO", "MARIA", "PEQUENA", "VIGARIA"],
   },
   4: {
@@ -40,7 +40,7 @@ const CONTENT: any = {
     author: "",
     data: "16/07/1969",
     type: "VIDEO",
-    time: "15",
+    length: "15",
     tags: [
       "2021",
       "CONDUTORA",
@@ -61,7 +61,17 @@ const CONTENT: any = {
       "Um tutorial GENerate registrado em direta para permitir aos gen e assistentes de conhecer o funcionamento da plataforma e terem acesso com facilidade aos materiais que são disponíveis.",
     data: "19/02/2022",
     type: "VIDEO",
-    time: "47",
+    length: "47",
+    tags: null,
+  },
+  6: {
+    title: "Frutos da vontade de Deus",
+    url: "https://generate.focolare.org/wp-content/uploads/2021/04/2-1.-Maria-Condottiera.mp4",
+    description:
+      "Um tutorial GENerate registrado em direta para permitir aos gen e assistentes de conhecer o funcionamento da plataforma e terem acesso com facilidade aos materiais que são disponíveis.",
+    data: "19/02/2022",
+    type: "VIDEO",
+    length: "47",
     tags: null,
   },
 };

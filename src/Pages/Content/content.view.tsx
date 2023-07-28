@@ -21,26 +21,30 @@ const View: FC<IProps> = ({ content, formatedType, theme }) => (
       <div className="content-description-wrapper">
         <p className="content-description">{content?.description}</p>
       </div>
-      <div className="content-tag-wrapper">
-        <div className="content-tag-area">
-          <p className="content-tag-title">Autor:</p>
-          <p className="content-tag">{content?.author}</p>
+      <div className="content-info-wrapper">
+        <div className="content-info-area">
+          <p className="content-info-title">Autor:</p>
+          <p className="content-info">{content?.author}</p>
         </div>
-        <div className="content-tag-area">
-          <p className="content-tag-title">Data:</p>
-          <p className="content-tag">{content?.data}</p>
+        <div className="content-info-area">
+          <p className="content-info-title">Data:</p>
+          <p className="content-info">{content?.data}</p>
         </div>
-        <div className="content-tag-area">
-          <p className="content-tag-title">Formato:</p>
-          <p className="content-tag">{formatedType}</p>
+        <div className="content-info-area">
+          <p className="content-info-title">Formato:</p>
+          <p className="content-info">{formatedType}</p>
         </div>
-        <div className="content-tag-area">
-          <p className="content-tag-title">Duração:</p>
-          <p className="content-tag">{content?.time}</p>
+        <div className="content-info-area">
+          <p className="content-info-title">Duração:</p>
+          <p className="content-info">{content?.length}</p>
         </div>
-        <div className="content-tag-area">
-          <p className="content-tag-title">Tags:</p>
-          <p className="content-tag">{content?.tags}</p>
+        <div className="content-info-area">
+          <p className="content-info-title">Tags:</p>
+          <div className="content-info-tags">
+            {content?.tags?.map((tag) => (
+            <p className="content-info">{tag}</p>
+            ))}
+          </div>
         </div>
       </div>
     </div>

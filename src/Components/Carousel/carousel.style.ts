@@ -32,7 +32,11 @@ export const CarouselWrapper = styled.div<{ theme: string }>`
       .carousel-content {
         display: flex;
         gap: 20px;
-        transition: 0.5s all;
+        transition: 0.5s;
+
+        .carousel-content-card-link {
+          text-decoration: none;
+        }
       }
     }
 
@@ -53,7 +57,7 @@ export const CarouselWrapper = styled.div<{ theme: string }>`
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: 0.5s background-color, 0.5s color;
+      transition: 0.5s;
 
       .carousel-arrow {
         font-size: ${fontSize.carouselArrow};

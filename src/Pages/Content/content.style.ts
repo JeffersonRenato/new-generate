@@ -4,8 +4,8 @@ import { fontSize, fontWeight, getColor } from "../../Constants";
 export const ContentWrapper = styled.div<{ theme: string }>`
   display: flex;
   justify-content: space-around;
-  height: 100vh;
-
+  min-height: 100vh;
+  
   .content-wrapper {
     width: 60%;
     height: 100%;
@@ -38,24 +38,30 @@ export const ContentWrapper = styled.div<{ theme: string }>`
       margin: 20px 0;
     }
 
-    .content-tag-wrapper {
+    .content-info-wrapper {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
 
-      .content-tag-area {
+      .content-info-area {
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
         margin-right: 20px;
         margin-bottom: 10px;
 
-        .content-tag-title {
+        .content-info-title {
           font-weight: ${fontWeight.bold};
         }
 
-        .content-tag {
+        .content-info {
           font-weight: ${fontWeight.light};
+        }
+        
+        .content-info-tags {
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
         }
       }
     }

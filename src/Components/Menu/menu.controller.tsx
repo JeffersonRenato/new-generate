@@ -1,12 +1,17 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect } from "react";
 import { useTheme } from "../../Contexts/States/theme";
 import { useLanguage } from "../../Contexts/States/language";
+import { useLanguageJson } from "../../Contexts/States/languageJson";
+import { useTranslation } from "../../in18";
+import portuguese from "../../in18/portuguese.json";
+import english from "../../in18/english.json";
 import View from "./menu.view";
 
 const Menu: FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [theme, setTheme] = useTheme();
   const setLanguage = useLanguage()[1];
+  const setLanguageJson = useLanguageJson()[1];
 
   const onClickCollapsed = () => {
     !isCollapsed ? setIsCollapsed(true) : setIsCollapsed(false);
@@ -19,7 +24,15 @@ const Menu: FC = () => {
 
   const onChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setLanguage(e.target.value);
+    setLanguageJson(e.target.value === "pt-BR" ? portuguese : english);
   };
+
+  const translation = useTranslation();
+
+  useEffect(() => {
+    const test = translation("MENU.HOME");
+    console.log("teste da alana: ", test);
+  }, [translation]);
 
   return (
     <View
