@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { fontSize, fontWeight, getColor } from "../../Constants";
+import { CardValues, fontSize, fontWeight, getColor } from "../../Constants";
 
-export const CarouselWrapper = styled.div<{ theme: string }>`
+export const CarouselWrapper = styled.div<{ theme: string, cardGap: number }>`
   margin: 10px 0;
   user-select: none;
 
@@ -31,12 +31,8 @@ export const CarouselWrapper = styled.div<{ theme: string }>`
 
       .carousel-content {
         display: flex;
-        gap: 20px;
+        gap: ${(props) => props.cardGap}px;
         transition: 0.5s;
-
-        .carousel-content-card-link {
-          text-decoration: none;
-        }
       }
     }
 

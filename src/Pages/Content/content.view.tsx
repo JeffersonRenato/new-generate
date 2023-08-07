@@ -22,10 +22,12 @@ const View: FC<IProps> = ({ content, formatedType, theme }) => (
         <p className="content-description">{content?.description}</p>
       </div>
       <div className="content-info-wrapper">
-        <div className="content-info-area">
-          <p className="content-info-title">Autor:</p>
-          <p className="content-info">{content?.author}</p>
-        </div>
+        {content?.author?.length && (
+          <div className="content-info-area">
+            <p className="content-info-title">Autor:</p>
+            <p className="content-info">{content?.author}</p>
+          </div>
+        )}
         <div className="content-info-area">
           <p className="content-info-title">Data:</p>
           <p className="content-info">{content?.data}</p>
@@ -38,14 +40,16 @@ const View: FC<IProps> = ({ content, formatedType, theme }) => (
           <p className="content-info-title">Duração:</p>
           <p className="content-info">{content?.length}</p>
         </div>
-        <div className="content-info-area">
-          <p className="content-info-title">Tags:</p>
-          <div className="content-info-tags">
-            {content?.tags?.map((tag) => (
-            <p className="content-info">{tag}</p>
-            ))}
+        {content?.tags?.length && (
+          <div className="content-info-area">
+            <p className="content-info-title">Tags:</p>
+            <div className="content-info-tags">
+              {content?.tags?.map((tag) => (
+                <p className="content-info">{tag}</p>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   </ContentWrapper>

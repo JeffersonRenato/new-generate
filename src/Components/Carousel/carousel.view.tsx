@@ -18,6 +18,8 @@ interface ICarouselView {
   carouselContentWrapper: React.RefObject<HTMLDivElement>;
   carouselContent: React.RefObject<HTMLDivElement>;
   theme: string;
+  cardSize: number;
+  cardGap: number;
 }
 
 const View: FC<ICarouselView> = ({
@@ -32,8 +34,10 @@ const View: FC<ICarouselView> = ({
   carouselContentWrapper,
   carouselContent,
   theme,
+  cardSize,
+  cardGap,
 }) => (
-  <CarouselWrapper theme={theme}>
+  <CarouselWrapper theme={theme} cardGap={cardGap}>
     <h1 className="carousel-title">{label}</h1>
     <div className="carousel-wrapper">
       <div className="carousel-arrow-wrapper carousel-arrow-left-wrapper" onClick={onClickLeft}>
@@ -53,16 +57,14 @@ const View: FC<ICarouselView> = ({
       <div className="carousel-content-wrapper" ref={carouselContentWrapper}>
         <div className="carousel-content" style={{ marginLeft: -left }} ref={carouselContent}>
           {cards.map((card) => (
-            <Link to={`/content/${card.id}`} className="carousel-content-card-link">
-              <Card
-                id={card.id}
-                image={card.image}
-                author={card.author}
-                title={card.title}
-                length={card.length}
-                type={card.type}
-              />
-            </Link>
+            <Card cardSize={cardSize}
+              id={card.id}
+              image={card.image}
+              author={card.author}
+              title={card.title}
+              length={card.length}
+              type={card.type}
+            />
           ))}
         </div>
       </div>

@@ -2,7 +2,7 @@ interface IContentResponse {
   title: string;
   url: string;
   description: string;
-  author: string;
+  author: string | null;
   data: string;
   type: string;
   length: number;

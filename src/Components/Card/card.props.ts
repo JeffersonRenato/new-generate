@@ -7,6 +7,7 @@ interface ICard {
   title: string;
   length: string;
   type: ITypeCard;
+  cardSize: number;
 }
 
 export default ICard;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontSize, getColor } from "../../Constants";
+import { device, fontSize, getColor } from "../../Constants";
 
 export const MenuWrapper = styled.div<{ theme: string }>`
   display: flex;
@@ -22,33 +22,34 @@ export const MenuWrapper = styled.div<{ theme: string }>`
       align-items: center;
       gap: 15px;
       margin-top: 10px;
-    }
+      transition: 0.5s;
 
-    .menu-header-icon {
-      width: 14px;
-      display: flex;
-      justify-content: center;
+      .menu-header-icon {
+        width: 14px;
+        display: flex;
+        justify-content: center;
 
-      .menu-hamburguer-icon {
-        color: ${(props) => getColor(props.theme, "whiteLevel1")};
+        .menu-hamburguer-icon {
+          color: ${(props) => getColor(props.theme, "whiteLevel1")};
+          transition: 0.5s;
+
+          &:hover {
+            cursor: pointer;
+            color: ${(props) => getColor(props.theme, "grayLevel5")};
+          }
+        }
+      }
+
+      .menu-logo-image {
+        width: 130px;
+        padding-top: 25px;
+        padding-bottom: 15px;
+        user-select: none;
         transition: 0.5s;
 
         &:hover {
           cursor: pointer;
-          color: ${(props) => getColor(props.theme, "grayLevel5")};
         }
-      }
-    }
-
-    .menu-logo-image {
-      width: 130px;
-      padding-top: 25px;
-      padding-bottom: 15px;
-      user-select: none;
-      transition: 0.5s;
-
-      &:hover {
-        cursor: pointer;
       }
     }
 
@@ -173,45 +174,75 @@ export const MenuWrapper = styled.div<{ theme: string }>`
 
   .menu-collapsed {
     width: 18px;
-    padding: 0 15px;
 
-    .menu-logo-image-collapsed {
+    .menu-logo-image {
       opacity: 0;
       visibility: hidden;
+      pointer-events: none;
     }
 
-    .menu-links-icons-collapsed {
+    .menu-links-icons {
       margin-right: 0;
     }
 
-    .menu-links-collapsed {
+    .menu-links {
       opacity: 0;
       visibility: hidden;
+      pointer-events: none;
     }
 
-    .menu-select-language-collapsed {
-      width: 30px;
-      font-size: ${fontSize.minorText};
-      color: ${(props) => getColor(props.theme, "whiteLevel1")};
-      background: ${(props) => getColor(props.theme, "grayLevel2")};
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      user-select: none;
-
-      &:hover {
-        cursor: pointer;
-      }
+    .menu-select-language {
+      visibility: hidden;
+      pointer-events: none;
     }
 
-    .menu-footer-link-collapsed {
+    .menu-footer-link {
       opacity: 0;
       visibility: hidden;
+      pointer-events: none;
     }
   }
 
   .content-collapsed {
     padding-left: 48px;
     width: calc(100% - 48px);
+  }
+
+  @media ${device.tablet}, ${device.mobile} {
+    .menu {
+      width: 18px;
+
+      .menu-logo-image {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .menu-links-icons {
+        margin-right: 0;
+      }
+
+      .menu-links {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .menu-select-language {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .menu-footer-link {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+
+    .content {
+      padding-left: 48px;
+      width: calc(100% - 48px);
+    }
   }
 `;

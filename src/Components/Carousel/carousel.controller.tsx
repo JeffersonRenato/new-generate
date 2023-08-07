@@ -1,19 +1,50 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState, useMemo } from "react";
 
 import { validateDisabledArrows } from "./library";
-import { CARD_SIZE } from "./constants";
+import { useTheme } from "../../Contexts/States/theme";
+import setCardValues from "./library/cardValues";
 
 import View from "./carousel.view";
 import ICarousel from "./carousel.props";
-import { useTheme } from "../../Contexts/States/theme";
 
 const Carousel: FC<ICarousel> = ({ label, cards }) => {
   const [left, setLeft] = useState(0);
   const [disabledArrowLeft, setDisabledArrowLeft] = useState(true);
   const [disabledArrowRight, setDisabledArrowRight] = useState(false);
   const [hiddenArrow, setHiddenArrow] = useState(false);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [theme] = useTheme();
   const carouselContentWrapper = useRef<HTMLDivElement>(null);
   const carouselContent = useRef<HTMLDivElement>(null);
+  const cardValues = useMemo(() => setCardValues(windowSize), [windowSize])
+
+  const onClickLeft = () => handleClick("left");
+  const onClickRight = () => handleClick("right");
+
+  const handleClick = (position: "left" | "right") => {
+    const wrapperWidth = carouselContentWrapper?.current?.clientWidth || 0;
+    const innerWidth = carouselContent?.current?.clientWidth || 0;
+    let updatedLeft = left;
+
+    if (position === "right" && left < innerWidth - wrapperWidth) {
+      setLeft(left + cardValues.cardDisplacement);
+      updatedLeft += cardValues.cardDisplacement;
+    }
+
+    if (position === "left" && left > 0) {
+      setLeft(left - cardValues.cardDisplacement);
+      updatedLeft -= cardValues.cardDisplacement;
+    }
+
+    const { disabledArrowRight, disabledArrowLeft } = validateDisabledArrows({
+      left: updatedLeft,
+      wrapperWidth,
+      innerWidth,
+    });
+
+    setDisabledArrowRight(disabledArrowRight);
+    setDisabledArrowLeft(disabledArrowLeft);
+  };
 
   useEffect(() => {
     const externalElement = carouselContentWrapper?.current;
@@ -22,7 +53,6 @@ const Carousel: FC<ICarousel> = ({ label, cards }) => {
     if (!externalElement || !internalElement) return;
 
     const observer = new ResizeObserver((entries) => {
-
       if (entries[0].contentRect.width >= internalElement.clientWidth) {
         setHiddenArrow(true);
       } else {
@@ -36,35 +66,17 @@ const Carousel: FC<ICarousel> = ({ label, cards }) => {
     };
   }, []);
 
-  const handleClick = (position: "left" | "right") => {
-    const wrapperWidth = carouselContentWrapper?.current?.clientWidth || 0;
-    const innerWidth = carouselContent?.current?.clientWidth || 0;
-    let updatedLeft = left;
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize(window.innerWidth);
+    };
 
-    if (position === "right" && left < innerWidth - wrapperWidth) {
-      setLeft(left + CARD_SIZE);
-      updatedLeft += CARD_SIZE;
-    }
+    window.addEventListener("resize", handleWindowResize);
 
-    if (position === "left" && left > 0) {
-      setLeft(left - CARD_SIZE);
-      updatedLeft -= CARD_SIZE;
-    }
-
-    const { disabledArrowRight, disabledArrowLeft } = validateDisabledArrows({
-      left: updatedLeft,
-      wrapperWidth,
-      innerWidth,
-    });
-
-    setDisabledArrowRight(disabledArrowRight);
-    setDisabledArrowLeft(disabledArrowLeft);
-  };
-
-  const onClickLeft = () => handleClick("left");
-  const onClickRight = () => handleClick("right");
-
-  const [theme] = useTheme()
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   return (
     <View
@@ -79,6 +91,8 @@ const Carousel: FC<ICarousel> = ({ label, cards }) => {
       carouselContentWrapper={carouselContentWrapper}
       carouselContent={carouselContent}
       theme={theme}
+      cardSize={cardValues.cardSize}
+      cardGap={cardValues.cardGap}
     />
   );
 };

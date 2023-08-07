@@ -1,16 +1,17 @@
-import { FC, useState } from "react";
-import View from "./card.view";
-import ICard from "./card.props";
+import { FC, useState, useEffect } from "react";
+
 import { useTheme } from "../../Contexts/States/theme";
 
-const Card: FC<ICard> = ({ id, image, author, title, length, type }) => {
+import View from "./card.view";
+import ICard from "./card.props";
+
+const Card: FC<ICard> = ({ id, image, author, title, length, type, cardSize }) => {
   const [isFavorite, setIsFavorite] = useState(false);
+  const [theme] = useTheme();
 
   const onClickFavorite = () => {
     !isFavorite ? setIsFavorite(true) : setIsFavorite(false);
   };
-
-  const [theme] = useTheme();
 
   return (
     <View
@@ -23,6 +24,7 @@ const Card: FC<ICard> = ({ id, image, author, title, length, type }) => {
       onClickFavorite={onClickFavorite}
       isFavorite={isFavorite}
       theme={theme}
+      cardSize={cardSize}
     />
   );
 };

@@ -36,6 +36,7 @@ export const ContentWrapper = styled.div<{ theme: string }>`
 
     .content-description-wrapper {
       margin: 20px 0;
+      line-height: 1.5em;
     }
 
     .content-info-wrapper {
