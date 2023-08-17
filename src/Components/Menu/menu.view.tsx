@@ -14,22 +14,23 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 
-interface IMenuView {
+interface IProps {
   onClickCollapsed: () => void;
   isCollapsed: boolean;
   onClickTheme: () => void;
   theme: string;
+  language: string;
   onChangeLanguage: React.ChangeEventHandler<HTMLSelectElement>;
 }
 
-const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed, onClickTheme, theme, onChangeLanguage }) => (
+const View: FC<IProps> = ({ onClickCollapsed, isCollapsed, onClickTheme, theme, language, onChangeLanguage }) => (
   <MenuWrapper theme={theme}>
     <div className={`menu ${isCollapsed ? "menu-collapsed" : ""}`}>
       <header className="menu-header">
         <div className="menu-header-icon">
           <FontAwesomeIcon icon={faBars} onClick={onClickCollapsed} className="menu-hamburguer-icon" />
         </div>
-        <Link to={"/home"} draggable={false}>
+        <Link to={"/"} draggable={false}>
           <img
             className="menu-logo-image"
             src={theme === "dark" ? "/image/logo-dark.png" : "/image/logo-light.png"}
@@ -40,7 +41,7 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed, onClickTheme, them
       </header>
       <nav className="menu-navigation">
         <ul className="menu-list">
-          <Link to={"/home"} className="menu-router-dom-links" draggable="false">
+          <Link to={"/"} className="menu-router-dom-links" draggable="false">
             <li className="menu-items">
               <div className="menu-links-icons-wrapper">
                 <FontAwesomeIcon icon={faHome} className="menu-links-icons" />
@@ -91,7 +92,7 @@ const View: FC<IMenuView> = ({ onClickCollapsed, isCollapsed, onClickTheme, them
         </ul>
       </nav>
       <div className="menu-select-language-wrapper">
-        <select onChange={onChangeLanguage} className="menu-select-language">
+        <select onChange={onChangeLanguage} className="menu-select-language" value={language}>
           {languageOptions.map((option) => (
             <option key={option.value} value={option.value}>
               {option.label}

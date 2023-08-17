@@ -2,7 +2,7 @@ import { atom } from "recoil";
 
 const languageState = atom({
   key: "languageState",
-  default: "pt-BR",
+  default: "en-US",
 });
 
 export default languageState;

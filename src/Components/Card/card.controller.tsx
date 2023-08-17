@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState } from "react";
 
 import { useTheme } from "../../Contexts/States/theme";
 
@@ -9,7 +9,8 @@ const Card: FC<ICard> = ({ id, image, author, title, length, type, cardSize }) =
   const [isFavorite, setIsFavorite] = useState(false);
   const [theme] = useTheme();
 
-  const onClickFavorite = () => {
+  const onClickFavorite = (e: React.MouseEvent<SVGSVGElement>) => {
+    e.preventDefault();
     !isFavorite ? setIsFavorite(true) : setIsFavorite(false);
   };
 
@@ -21,10 +22,10 @@ const Card: FC<ICard> = ({ id, image, author, title, length, type, cardSize }) =
       title={title}
       length={length}
       type={type}
+      cardSize={cardSize}
       onClickFavorite={onClickFavorite}
       isFavorite={isFavorite}
       theme={theme}
-      cardSize={cardSize}
     />
   );
 };

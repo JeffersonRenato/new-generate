@@ -3,7 +3,7 @@ import { device, fontSize, getColor } from "../../Constants";
 
 export const MenuWrapper = styled.div<{ theme: string }>`
   display: flex;
-  user-select: none;
+  /* user-select: none; */
 
   .menu {
     display: flex;
@@ -44,7 +44,7 @@ export const MenuWrapper = styled.div<{ theme: string }>`
         width: 130px;
         padding-top: 25px;
         padding-bottom: 15px;
-        user-select: none;
+        /* user-select: none; */
         transition: 0.5s;
 
         &:hover {
@@ -91,7 +91,7 @@ export const MenuWrapper = styled.div<{ theme: string }>`
       height: 100%;
       margin-left: 15px;
       color: ${(props) => getColor(props.theme, "whiteLevel1")};
-      user-select: none;
+      /* user-select: none; */
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -112,7 +112,7 @@ export const MenuWrapper = styled.div<{ theme: string }>`
         font-size: ${fontSize.minorText};
         color: ${(props) => getColor(props.theme, "whiteLevel1")};
         background: ${(props) => getColor(props.theme, "grayLevel2")};
-        user-select: none;
+        /* user-select: none; */
 
         &:hover {
           cursor: pointer;
@@ -151,7 +151,7 @@ export const MenuWrapper = styled.div<{ theme: string }>`
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        user-select: none;
+        /* user-select: none; */
         margin-left: 20px;
         margin-bottom: 5px;
         transition: 0.5s;

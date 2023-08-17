@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { CardValues, fontSize, fontWeight, getColor } from "../../Constants";
+import { fontSize, fontWeight, getColor } from "../../Constants";
 
-export const CarouselWrapper = styled.div<{ theme: string, cardGap: number }>`
+export const CarouselWrapper = styled.div<{ theme: string; cardGap: number }>`
   margin: 10px 0;
-  user-select: none;
+  /* user-select: none; */
 
   .carousel-title {
     margin: 25px 60px;

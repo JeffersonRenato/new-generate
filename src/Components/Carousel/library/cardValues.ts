@@ -1,5 +1,5 @@
 const setCardValues = (windowSize: number) => {
-  let cardSize = 250;
+  let cardSize = 220;
   let cardGap = 10;
 
   switch (true) {
@@ -8,11 +8,11 @@ const setCardValues = (windowSize: number) => {
       cardGap = 5;
       break;
     case windowSize >= 768 && windowSize <= 1023:
-      cardSize = 220;
-      cardGap = 5;
+      cardSize = 200;
+      cardGap = 8;
       break;
     case windowSize >= 1024:
-      cardSize = 250;
+      cardSize = 220;
       cardGap = 10;
       break;
   }

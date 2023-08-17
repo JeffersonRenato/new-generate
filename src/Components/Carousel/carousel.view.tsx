@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
 import { Card } from "../Card";
 import { ICard } from "../../Services";
 import { CarouselWrapper } from "./carousel.style";

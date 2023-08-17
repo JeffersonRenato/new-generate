@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import { RouterProvider, ScrollRestoration } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import router from "./Router";
-import "./reset.scss";
-import "./index.scss";
+import "./reset.css";
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(

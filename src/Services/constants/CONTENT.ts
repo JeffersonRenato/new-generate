@@ -313,6 +313,64 @@ const CONTENT: any = {
     length: "4",
     tags: null,
   },
+  26: {
+    title: "A alegria",
+    url: "https://generate.focolare.org/wp-content/uploads/2020/06/gen-37-text-pt.pdf",
+    description:
+      "O homem se realiza na comunhão com Deus. Os primeiros cristãos faziam-se “um” com o próximo, e a alegria deles era a alegria de Jesus. Os jovens devem encontrar um modelo. A dor amada por Cristo é fonte extraordinária de alegria.",
+    author: "LUBICH CHIARA",
+    data: "18/04/1984",
+    type: "TEXT",
+    length: "16",
+    tags: ["ALEGRIA", "CRISTÃOS", "DOR", "PRIMEIROS CRISTÃOS", "REALIZAÇÃO"],
+  },
+  27: {
+    title: "EBA2022_ Introdução à escola: O amor cura",
+    url: "https://generate.focolare.org/wp-content/uploads/2022/10/INTRODUZIONE-SBA-2022-FINALE.mp4",
+    description:
+      "Introdução à Escola Branca 2022, através de diapositivos. Oferecemos os textos completos e o esboço dinâmico com que os tópicos foram apresentados.",
+    author: ["CENTROS GEN2 - JPMU", "JEROME CUQUEL", "PEPE PAOLA"],
+    data: "10/08/2022",
+    type: "VIDEO",
+    length: "40",
+    tags: ["ESCOLA", "ESCOLA ASSISTENTES", "ESCOLA DE BRANCOS", "ESCOLA GEN", "INTRODUÇÃO"],
+  },
+  28: {
+    title: "O Jornal «Gen» se apresenta",
+    url: "https://generate.focolare.org/wp-content/uploads/2020/06/gen-97-text-pt.pdf",
+    description:
+      "No mês de março de 1967 foi impresso pela primeira vez, o jornal GEN e eis aqui o primeiro editorial escrito por Chiara.",
+    author: "LUBICH CHIARA",
+    data: "01/03/1967",
+    type: "TEXT",
+    length: "2",
+    tags: ["CHIARA", "EDITORIAL", "IMPRESSÃO", "JORNAL GEN"],
+  },
+  29: {
+    title: "Jornal Gen 1/2023",
+    url: "https://generate.focolare.org/wp-content/uploads/2023/07/gen.epub",
+    description:
+      "Com o maior número possível de jovens em todo o mundo, queremos lançar uma grande revolução com o grito de “vamos unir-nos”. O nosso jornal fala-lhe dos passos que demos e das medidas a tomar.",
+    author: "CENTROS GEN2 - JPMU",
+    data: "25/07/2023",
+    type: "EBOOK",
+    length: "1",
+    tags: [
+      "AMARELO",
+      "CAMINHO",
+      "CAMINHO",
+      "CHIARA LUCE",
+      "GENERATE",
+      "GENFEST",
+      "GERAR",
+      "JMJ",
+      "MUNDO UNIDO",
+      "ORAÇÃO",
+      "PATHWAYS",
+      "VERDE",
+      "VIAGEM",
+    ],
+  },
 };
 
 export default CONTENT;

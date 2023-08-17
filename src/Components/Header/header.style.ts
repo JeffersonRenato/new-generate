@@ -5,6 +5,6 @@ export const HeaderWrapper = styled.div`
     width: 100%;
     max-height: 640px;
     object-fit: cover;
-    user-select: none;
+    /* user-select: none; */
   }
 `;

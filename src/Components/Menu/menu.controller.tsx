@@ -10,7 +10,7 @@ import View from "./menu.view";
 const Menu: FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [theme, setTheme] = useTheme();
-  const setLanguage = useLanguage()[1];
+  const [language, setLanguage] = useLanguage();
   const setLanguageJson = useLanguageJson()[1];
 
   const onClickCollapsed = () => {
@@ -40,6 +40,7 @@ const Menu: FC = () => {
       isCollapsed={isCollapsed}
       onClickTheme={onClickTheme}
       theme={theme}
+      language={language}
       onChangeLanguage={onChangeLanguage}
     />
   );

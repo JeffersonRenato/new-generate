@@ -1,11 +1,13 @@
 import { FC } from "react";
-import { IImageProps } from "./header.controller";
-import { HeaderWrapper } from "./header.style";
+import { Link } from "react-router-dom";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
+import { HeaderWrapper } from "./header.style";
+import { IImages } from "./types";
+
 interface IProps {
-  allImages: IImageProps[];
+  allImages: IImages[];
 }
 
 const View: FC<IProps> = ({ allImages }) => (
@@ -25,7 +27,9 @@ const View: FC<IProps> = ({ allImages }) => (
     >
       {allImages.map((image) => (
         <SplideSlide key={image.index}>
-          <img className="slider-image" src={image.src} />
+          <Link to={`/content/${image.id}`}>
+            <img className="slider-image" src={image.src} />
+          </Link>
         </SplideSlide>
       ))}
     </Splide>

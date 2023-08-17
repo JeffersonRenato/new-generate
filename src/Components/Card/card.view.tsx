@@ -5,20 +5,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faVideo } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-interface ICard {
+interface IProps {
   id: number;
   image: string;
   author: string | null;
   title: string;
   length: string;
   type: ITypeCard;
-  onClickFavorite: () => void;
+  cardSize: number;
+  onClickFavorite: React.MouseEventHandler<SVGSVGElement>;
   isFavorite: boolean;
   theme: string;
-  cardSize: number;
 }
 
-const View: FC<ICard> = ({ id, image, author, title, length, type, onClickFavorite, isFavorite, theme, cardSize }) => (
+const View: FC<IProps> = ({ id, image, author, title, length, type, onClickFavorite, isFavorite, theme, cardSize }) => (
   <CardWrapper theme={theme} cardSize={cardSize}>
     <Link to={`/content/${id}`} className="carousel-content-link">
       <div className="card-image-wrapper">

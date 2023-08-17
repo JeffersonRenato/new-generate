@@ -1,11 +1,11 @@
 const languageOptions = [
   {
-    label: "Português",
-    value: "pt-BR",
-  },
-  {
     label: "English",
     value: "en-US",
+  },
+  {
+    label: "Português",
+    value: "pt-BR",
   },
 ];
 
