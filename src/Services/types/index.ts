@@ -4,6 +4,7 @@ import ICarouselResponse from "./ICarouselResponse";
 import IParagraph from './IParagraph';
 import IAboutResponse from './IAboutResponse';
 import IContentResponse from './IContentResponse';
+import IFavoritesResponse from './IFavoritesResponse';
 
 export type {
   ICard,
@@ -11,5 +12,6 @@ export type {
   ICarouselResponse,
   IParagraph,
   IAboutResponse,
-  IContentResponse
+  IContentResponse,
+  IFavoritesResponse
 }

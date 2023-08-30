@@ -1,6 +1,6 @@
 import ICarouselResponse from "../types/ICarouselResponse";
 
-const CAROUSEL: ICarouselResponse[] = [
+const CARDS: ICarouselResponse[] = [
   {
     label: "Em evidência",
     cards: [
@@ -226,4 +226,4 @@ const CAROUSEL: ICarouselResponse[] = [
   },
 ];
 
-export default CAROUSEL;
+export default CARDS;

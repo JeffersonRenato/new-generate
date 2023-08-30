@@ -6,12 +6,26 @@ import View from "./card.view";
 import ICard from "./card.props";
 
 const Card: FC<ICard> = ({ id, image, author, title, length, type, cardSize }) => {
-  const [isFavorite, setIsFavorite] = useState(false);
   const [theme] = useTheme();
+  const [isFavorite, setIsFavorite] = useState(JSON.parse(localStorage.getItem("favorites") as string)?.includes(id));
 
   const onClickFavorite = (e: React.MouseEvent<SVGSVGElement>) => {
     e.preventDefault();
-    !isFavorite ? setIsFavorite(true) : setIsFavorite(false);
+
+    let favoritesStorage = localStorage.getItem("favorites")
+      ? JSON.parse(localStorage.getItem("favorites") as string)
+      : [];
+
+    if (isFavorite) {
+      setIsFavorite(false);
+      const filteredFavorites = favoritesStorage.filter((favoriteID: number) => favoriteID !== id);
+      favoritesStorage = filteredFavorites;
+    } else {
+      setIsFavorite(true);
+      favoritesStorage.push(id);
+    }
+
+    localStorage.setItem("favorites", JSON.stringify(favoritesStorage));
   };
 
   return (

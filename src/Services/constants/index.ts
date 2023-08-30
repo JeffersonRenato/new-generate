@@ -1,4 +1,5 @@
-import CAROUSEL from "./CAROUSEL";
 import ABOUT from "./ABOUT";
+import CARDS from "./CARDS";
+import CONTENT from "./CONTENT";
 
-export { CAROUSEL, ABOUT };
+export { ABOUT, CARDS, CONTENT };

@@ -2,7 +2,7 @@ import { atom } from "recoil";
 
 const themeState = atom({
   key: "themeState",
-  default: "dark",
+  default: localStorage.getItem("theme") || "dark",
 });
 
 export default themeState;

@@ -1,10 +1,10 @@
-import { CAROUSEL } from "../constants";
+import { CARDS } from "../constants";
 import ICarouselResponse from "../types/ICarouselResponse";
 
 class ServiceHome {
   getCarousels = () => {
     return new Promise<ICarouselResponse[]>((resolve) => {
-      resolve(CAROUSEL);
+      resolve(CARDS);
     });
   };
 }

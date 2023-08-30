@@ -11,15 +11,9 @@ interface IProps {
 const View: FC<IProps> = (props) => (
   <HomeWrapper>
     <Header />
-    {
-      props.carousels.map((carousel, index) => (
-        <Carousel 
-          key={index}
-          label={carousel.label}
-          cards={carousel.cards}
-        />
-      ))
-    }
+    {props.carousels.map((carousel, index) => (
+      <Carousel key={index} label={carousel.label} cards={carousel.cards} />
+    ))}
   </HomeWrapper>
 );
 

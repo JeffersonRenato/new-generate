@@ -5,7 +5,7 @@ import { CarouselWrapper } from "./carousel.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
-interface ICarouselView {
+interface IProps {
   onClickRight: () => void;
   onClickLeft: () => void;
   left: number;
@@ -16,12 +16,12 @@ interface ICarouselView {
   cards: Array<ICard>;
   carouselContentWrapper: React.RefObject<HTMLDivElement>;
   carouselContent: React.RefObject<HTMLDivElement>;
-  theme: string;
   cardSize: number;
   cardGap: number;
+  theme: string;
 }
 
-const View: FC<ICarouselView> = ({
+const View: FC<IProps> = ({
   onClickLeft,
   onClickRight,
   left,
@@ -56,13 +56,14 @@ const View: FC<ICarouselView> = ({
       <div className="carousel-content-wrapper" ref={carouselContentWrapper}>
         <div className="carousel-content" style={{ marginLeft: -left }} ref={carouselContent}>
           {cards.map((card) => (
-            <Card cardSize={cardSize}
+            <Card
               id={card.id}
               image={card.image}
               author={card.author}
               title={card.title}
               length={card.length}
               type={card.type}
+              cardSize={cardSize}
             />
           ))}
         </div>

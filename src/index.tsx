@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider, ScrollRestoration } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import router from "./Router";
 import "./reset.css";

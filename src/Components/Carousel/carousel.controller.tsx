@@ -16,7 +16,7 @@ const Carousel: FC<ICarousel> = ({ label, cards }) => {
   const [theme] = useTheme();
   const carouselContentWrapper = useRef<HTMLDivElement>(null);
   const carouselContent = useRef<HTMLDivElement>(null);
-  const cardValues = useMemo(() => setCardValues(windowSize), [windowSize])
+  const cardValues = useMemo(() => setCardValues(windowSize), [windowSize]);
 
   const onClickLeft = () => handleClick("left");
   const onClickRight = () => handleClick("right");
@@ -86,13 +86,13 @@ const Carousel: FC<ICarousel> = ({ label, cards }) => {
       disabledArrowLeft={disabledArrowLeft}
       disabledArrowRight={disabledArrowRight}
       hiddenArrow={hiddenArrow}
-      label={label}
-      cards={cards}
       carouselContentWrapper={carouselContentWrapper}
       carouselContent={carouselContent}
-      theme={theme}
+      label={label}
+      cards={cards}
       cardSize={cardValues.cardSize}
       cardGap={cardValues.cardGap}
+      theme={theme}
     />
   );
 };

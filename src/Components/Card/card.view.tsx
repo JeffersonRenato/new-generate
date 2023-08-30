@@ -18,7 +18,7 @@ interface IProps {
   theme: string;
 }
 
-const View: FC<IProps> = ({ id, image, author, title, length, type, onClickFavorite, isFavorite, theme, cardSize }) => (
+const View: FC<IProps> = ({ id, image, author, title, length, type, cardSize, onClickFavorite, isFavorite, theme }) => (
   <CardWrapper theme={theme} cardSize={cardSize}>
     <Link to={`/content/${id}`} className="carousel-content-link">
       <div className="card-image-wrapper">
